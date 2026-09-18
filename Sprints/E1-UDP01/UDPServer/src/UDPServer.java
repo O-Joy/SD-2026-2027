@@ -16,12 +16,16 @@ public class UDPServer {
                 String receivedMessage = new String(request.getData(),0,request.getLength());
 
                 int commaIndex = receivedMessage.indexOf(',');
+                String message = "";
+                int sequenceNumber = 0;
+
                 if (commaIndex != -1)
                 {
                     String number = receivedMessage.substring(0, commaIndex);
-                    String message = receivedMessage.substring(commaIndex+1);
+                    message = receivedMessage.substring(commaIndex+1);
+
                     try{
-                        int sequenceNumber = Integer.parseInt(number);
+                        sequenceNumber = Integer.parseInt(number);
 
                     }catch(NumberFormatException e){
                         System.out.println("Invalid number");
