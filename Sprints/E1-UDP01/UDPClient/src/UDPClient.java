@@ -15,20 +15,52 @@ public class UDPClient {
 
             Scanner scanner = new Scanner(System.in);
 
-            int sequenceNumber = 0;
+            int sequenceNumber = 1;
 
             System.out.println("Cliente UDP iniciado. Escreva uma mensagem e prime Enter para enviar.");
             System.out.println("Escreva 'sair' para terminar.");
 
             while (true) {
-                System.out.print("> ");
+                System.out.print("Mensagem (ou 'sair'): ");
                 String userInput = scanner.nextLine();
 
                 if (userInput.equalsIgnoreCase("sair")) {
                     break;
                 }
 
-                String messageToSend = sequenceNumber + "," + userInput;
+                String mode;
+                do {
+                    System.out.print("Modo automático ou manual? (A/M): ");
+                    mode = scanner.nextLine().trim().toUpperCase();
+
+                    if (!mode.equals("A") && !mode.equals("M")) {
+                        System.out.println("Modo inválido. Escolha A ou M.");
+                    }
+                } while (!mode.equals("A") && !mode.equals("M"));
+
+                int messageNumber;
+
+                if (mode.equals("A")) {
+                    messageNumber = sequenceNumber;
+                    sequenceNumber++;
+                } else {
+                    Integer parsed = null;
+                    do {
+                        System.out.print("Número da mensagem: ");
+                        String text = scanner.nextLine().trim();
+
+                        try {
+                            parsed = Integer.parseInt(text);
+                        } catch (NumberFormatException e) {
+                            System.out.println("Número inválido. Escreva um inteiro.");
+                        }
+                    } while (parsed == null);
+
+                    messageNumber = parsed;
+                }
+
+                String messageToSend = messageNumber + "," + userInput;
+
                 byte[] data = messageToSend.getBytes();
 
                 DatagramPacket request = new DatagramPacket(data, data.length, serverHost, serverPort);
@@ -39,9 +71,13 @@ public class UDPClient {
                 aSocket.receive(reply);
 
                 String receivedReply = new String(reply.getData(), 0, reply.getLength());
-                System.out.println("Servidor respondeu: " + receivedReply);
 
-                sequenceNumber++;
+                if (receivedReply.startsWith("waitingfor,")) {
+                    System.out.println("Servidor pede: " + receivedReply);
+                } else {
+                    System.out.println("Echo recebido: " + receivedReply);
+                }
+
             }
 
             System.out.println("Cliente terminado.");
