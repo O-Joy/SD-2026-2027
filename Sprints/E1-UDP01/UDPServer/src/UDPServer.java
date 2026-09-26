@@ -6,8 +6,27 @@ import java.util.*;
 public class UDPServer {
 
 static List<String> listaRececao = new ArrayList<>();
-
 static Map<Integer, String> bufferTemporario = new HashMap<>();
+
+    public static int processDeliveredMessages(int nLastMessageInOrder, int nCurrentMessage, String currentMessage) {
+        int L = nLastMessageInOrder;
+
+        if (nCurrentMessage == L + 1) {
+            listaRececao.add(currentMessage);
+            L = nCurrentMessage;
+
+            while (bufferTemporario.containsKey(L + 1)) {
+                String proximaMensagem = bufferTemporario.remove(L + 1);
+                listaRececao.add(proximaMensagem);
+                L = L + 1;
+            }
+
+        } else if (nCurrentMessage > L + 1) {
+            bufferTemporario.put(nCurrentMessage, currentMessage);
+        }
+
+        return L;
+    }
 
 
     public static void main(String args[]) {
@@ -37,16 +56,26 @@ static Map<Integer, String> bufferTemporario = new HashMap<>();
                     try {
                         int sequenceNumber = Integer.parseInt(numberStr);
 
-                        // Regra de decisao do protocolo
-                        if (sequenceNumber == L + 1) {
-                            // Mensagem em ordem: aceita e atualiza o estado L
-                            L = sequenceNumber;
-                            replyMessage = receivedMessage; // Comportamento de echo
-                            System.out.println("[ACEITE] Mensagem " + sequenceNumber + " em ordem. Novo L = " + L);
+                        if (sequenceNumber <= L) {
+                            // Duplicado ou já processado — L não muda, não passa pelo processDeliveredMessages
+                            replyMessage = "dup," + sequenceNumber;
+                            System.out.println("[DUPLICADO] Mensagem " + sequenceNumber + " já processada (L=" + L + ")");
+
                         } else {
-                            // Mensagem fora de ordem: rejeita, nao altera L e pede a esperada
-                            replyMessage = "waitingfor," + (L + 1);
-                            System.out.println("[FORA DE ORDEM] Recebido " + sequenceNumber + ", esperado " + (L + 1) + ". L mantem-se " + L);
+                            int oldL = L;
+                            L = processDeliveredMessages(L, sequenceNumber, receivedMessage);
+
+                            if (L > oldL) {
+                                // Foi entregue
+                                replyMessage = receivedMessage;
+                                System.out.println("[ACEITE] Mensagem " + sequenceNumber + " entregue. Novo L = " + L
+                                        + (L > sequenceNumber ? " (cascata libertou até " + L + ")" : ""));
+                            } else {
+                                // Ficou retida no buffer temporário, à espera
+                                replyMessage = "waitingfor," + (L + 1);
+                                System.out.println("[RETIDA] Mensagem " + sequenceNumber + " guardada. A espera de " + (L + 1)
+                                        + ". Buffer agora: " + bufferTemporario.keySet());
+                            }
                         }
 
                     } catch (NumberFormatException e) {

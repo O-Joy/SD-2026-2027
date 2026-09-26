@@ -83,9 +83,12 @@ public class UDPClient {
                 if (receivedReply.startsWith("waitingfor,")) {
                     String esperado = receivedReply.split(",")[1];
                     System.out.println("<!> AVISO DO SERVIDOR: Mensagem fora de ordem!");
-                    System.out.println("    O servidor rejeitou o pacote e esta a espera da mensagem: " + esperado);
+                    System.out.println("    O servidor recebeu, guardou, e esta a espera da mensagem: " + esperado);
+                } else if (receivedReply.startsWith("dup,")) {
+                    String duplicado = receivedReply.split(",")[1];
+                    System.out.println("<!> AVISO: Mensagem " + duplicado + " ja tinha sido processada (duplicado ignorado).");
                 } else {
-                    System.out.println("[OK - ECHO RECEBIDO]: " + receivedReply);
+                    System.out.println("[ENTREGUE]: " + receivedReply);
                 }
             }
 
