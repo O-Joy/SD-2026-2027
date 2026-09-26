@@ -1,7 +1,14 @@
 import java.net.*;
 import java.io.*;
+import java.util.*;
+
 
 public class UDPServer {
+
+static List<String> listaRececao = new ArrayList<>();
+
+static Map<Integer, String> bufferTemporario = new HashMap<>();
+
 
     public static void main(String args[]) {
         DatagramSocket aSocket = null;
