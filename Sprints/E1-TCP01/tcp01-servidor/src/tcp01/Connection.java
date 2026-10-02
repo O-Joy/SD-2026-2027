@@ -1,19 +1,19 @@
 package tcp01;
-
 import java.io.*;
 import java.net.*;
 
 public class Connection extends Thread {
-    DataInputStream in;
-    DataOutputStream out;
+    ObjectInputStream in;  
+    DataOutputStream out;   
     Socket clientSocket;
 
     public Connection(Socket aClientSocket) {
         try {
             clientSocket = aClientSocket;
-            in = new DataInputStream(clientSocket.getInputStream());
+            // A ordem importa: primeiro abres as streams
+            in = new ObjectInputStream(clientSocket.getInputStream());
             out = new DataOutputStream(clientSocket.getOutputStream());
-            this.start();                                       // executa run() numa thread separada
+            this.start();                                       
         } catch (IOException e) {
             System.out.println("Connection: " + e.getMessage());
         }
@@ -22,22 +22,22 @@ public class Connection extends Thread {
     @Override
     public void run() {
         try {
-            String data = in.readUTF();                         // lê os dados do cliente, bloqueia espera pelo cliente
-            System.out.println("A atender: " + Thread.currentThread().getName());
-            try{
-                Thread.sleep(10000);
-            } catch (InterruptedException e) {}
-            out.writeUTF(data);                                 // envia a resposta ao cliente, desbloqueia readUTF do cliente
+            // 1. Lemos o objeto (readObject devolve um Object genérico)
+            // 2. Fazemos o CAST explícito (Person)
+            Person p = (Person) in.readObject();                         
+            
+            // 3. O servidor responde apenas com o nome da pessoa
+            out.writeUTF("Olá, " + p.getName());                                 
+            
+        } catch (ClassNotFoundException e) {
+            // E se o cliente enviar uma classe que o servidor não tem?
+            System.out.println("Classe nao encontrada: " + e.getMessage());
         } catch (EOFException e) {
             System.out.println("EOF: " + e.getMessage());
         } catch (IOException e) {
             System.out.println("IO: " + e.getMessage());
         } finally {
-            try {
-                clientSocket.close();
-            } catch (IOException e) {
-                /* falha ao fechar */
-            }
+            try { clientSocket.close(); } catch (IOException e) { /* falha ao fechar */ }
         }
     }
 }
