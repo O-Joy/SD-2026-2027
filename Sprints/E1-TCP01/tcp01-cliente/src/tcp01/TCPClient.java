@@ -6,20 +6,24 @@ public class TCPClient {
     public static void main(String[] args) {
         Socket s = null;
         try {
-            int serverPort = 7896;                              
+            int serverPort = 7896;
             s = new Socket("localhost", serverPort);
-            
+
             ObjectOutputStream out = new ObjectOutputStream(s.getOutputStream());
             DataInputStream in = new DataInputStream(s.getInputStream());
-            
-            // Criar a pessoa e enviar
-            Person p = new Person("Joao Silva", 1995);
-            out.writeObject(p); // Envia o objeto inteiro serializado!                   
-            
+
+            // Criar o Place e a Person que o referencia
+            Place place = new Place("3500-000", "Viseu");
+            Person p = new Person("Joao Silva", place, 1995);
+
+            // Escreve-se APENAS a Person: o Place segue com ela automaticamente
+            out.writeObject(p);
+            out.flush();
+
             // O cliente continua a receber a resposta como texto
-            String data = in.readUTF();                         
+            String data = in.readUTF();
             System.out.println("Servidor respondeu: " + data);
-            
+
         } catch (UnknownHostException e) {
             System.out.println("Sock: " + e.getMessage());
         } catch (EOFException e) {

@@ -2,16 +2,17 @@ package tcp01;
 
 import java.io.Serializable;
 
-
 public class Person implements Serializable {
-    
+
     private static final long serialVersionUID = 1L;
 
     private String name;
     private int year;
+    private Place place;            // referência para o objeto dependente
 
-    public Person(String name, int year) {
+    public Person(String name, Place place, int year) {
         this.name = name;
+        this.place = place;
         this.year = year;
     }
 
@@ -21,5 +22,9 @@ public class Person implements Serializable {
 
     public int getYear() {
         return year;
+    }
+
+    public Place getPlace() {
+        return place;
     }
 }
