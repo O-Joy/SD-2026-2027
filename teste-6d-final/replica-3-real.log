@@ -1,0 +1,2114 @@
+Réplica 3: p0 (último seq: 2975), subscreve rep02-p0
+p0 EM ESPERA: 2989 (falta o registo 2976)
+p0 EM ESPERA: 2990 (falta o registo 2976)
+p0 EM ESPERA: 2991 (falta o registo 2976)
+p0 DESCARTADO (simulação): 2992
+p0 EM ESPERA: 2993 (falta o registo 2976)
+p0 EM ESPERA: 2994 (falta o registo 2976)
+p0 EM ESPERA: 2995 (falta o registo 2976)
+p0 DESCARTADO (simulação): 2996
+p0 EM ESPERA: 2997 (falta o registo 2976)
+p0 EM ESPERA: 2998 (falta o registo 2976)
+p0 DESCARTADO (simulação): 2999
+p0 EM ESPERA: 3000 (falta o registo 2976)
+p0 DESCARTADO (simulação): 3001
+p0 DESCARTADO (simulação): 3002
+p0 EM ESPERA: 3003 (falta o registo 2976)
+p0 EM ESPERA: 3004 (falta o registo 2976)
+p0 RECUPERAÇÃO: 2976..2988 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 2976
+p0 RECUPERADO: 2977
+p0 RECUPERADO: 2978
+p0 RECUPERADO: 2979
+p0 RECUPERADO: 2980
+p0 RECUPERADO: 2981
+p0 RECUPERADO: 2982
+p0 RECUPERADO: 2983
+p0 RECUPERADO: 2984
+p0 RECUPERADO: 2985
+p0 RECUPERADO: 2986
+p0 RECUPERADO: 2987
+p0 RECUPERADO: 2988
+p0 aplicado (estava retido): 2989;S06;23.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 2990;S06;22.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 2991;S05;17.2;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3005
+p0 EM ESPERA: 3006 (falta o registo 2992)
+p0 EM ESPERA: 3007 (falta o registo 2992)
+p0 EM ESPERA: 3008 (falta o registo 2992)
+p0 RECUPERAÇÃO: 2992..2992 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 2992
+p0 aplicado (estava retido): 2993;S03;28.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 2994;S04;26.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 2995;S06;21.1;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3009
+p0 EM ESPERA: 3010 (falta o registo 2996)
+p0 EM ESPERA: 3011 (falta o registo 2996)
+p0 EM ESPERA: 3012 (falta o registo 2996)
+p0 RECUPERAÇÃO: 2996..2996 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 2996
+p0 aplicado (estava retido): 2997;S08;20.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 2998;S07;23.9;2026-10-20T16:44:56
+p0 EM ESPERA: 3013 (falta o registo 2999)
+p0 DESCARTADO (simulação): 3014
+p0 DESCARTADO (simulação): 3015
+p0 EM ESPERA: 3016 (falta o registo 2999)
+p0 RECUPERAÇÃO: 2999..2999 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 2999
+p0 aplicado (estava retido): 3000;S01;21.7;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3017
+p0 DESCARTADO (simulação): 3018
+p0 EM ESPERA: 3019 (falta o registo 3001)
+p0 RECUPERAÇÃO: 3001..3002 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3001
+p0 RECUPERADO: 3002
+p0 aplicado (estava retido): 3003;S09;28.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3004;S04;23.3;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3020
+p0 EM ESPERA: 3021 (falta o registo 3005)
+p0 EM ESPERA: 3022 (falta o registo 3005)
+p0 RECUPERAÇÃO: 3005..3005 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3005
+p0 aplicado (estava retido): 3006;S09;24.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3007;S03;18.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3008;S02;15.5;2026-10-20T16:44:56
+p0 EM ESPERA: 3023 (falta o registo 3009)
+p0 EM ESPERA: 3024 (falta o registo 3009)
+p0 DESCARTADO (simulação): 3025
+p0 EM ESPERA: 3026 (falta o registo 3009)
+p0 RECUPERAÇÃO: 3009..3009 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3009
+p0 aplicado (estava retido): 3010;S10;27.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3011;S08;28.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3012;S02;24.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3013;S10;29.9;2026-10-20T16:44:56
+p0 EM ESPERA: 3027 (falta o registo 3014)
+p0 EM ESPERA: 3028 (falta o registo 3014)
+p0 EM ESPERA: 3029 (falta o registo 3014)
+p0 EM ESPERA: 3030 (falta o registo 3014)
+p0 RECUPERAÇÃO: 3014..3015 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3014
+p0 RECUPERADO: 3015
+p0 aplicado (estava retido): 3016;S04;24.1;2026-10-20T16:44:56
+p0 EM ESPERA: 3031 (falta o registo 3017)
+p0 RECUPERAÇÃO: 3017..3018 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3017
+p0 RECUPERADO: 3018
+p0 aplicado (estava retido): 3019;S08;28.5;2026-10-20T16:44:56
+p0 EM ESPERA: 3032 (falta o registo 3020)
+p0 RECUPERAÇÃO: 3020..3020 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3020
+p0 aplicado (estava retido): 3021;S08;20.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3022;S06;26.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3023;S08;22.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3024;S05;25.4;2026-10-20T16:44:56
+p0 EM ESPERA: 3033 (falta o registo 3025)
+p0 DESCARTADO (simulação): 3034
+p0 DESCARTADO (simulação): 3035
+p0 DESCARTADO (simulação): 3036
+p0 DESCARTADO (simulação): 3037
+p0 DESCARTADO (simulação): 3038
+p0 EM ESPERA: 3039 (falta o registo 3025)
+p0 EM ESPERA: 3040 (falta o registo 3025)
+p0 DESCARTADO (simulação): 3041
+p0 EM ESPERA: 3042 (falta o registo 3025)
+p0 RECUPERAÇÃO: 3025..3025 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3025
+p0 aplicado (estava retido): 3026;S03;18.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3027;S03;25.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3028;S06;29.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3029;S01;22.1;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3030;S02;17.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3031;S07;16.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3032;S08;27.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3033;S09;17.3;2026-10-20T16:44:56
+p0 EM ESPERA: 3043 (falta o registo 3034)
+p0 EM ESPERA: 3044 (falta o registo 3034)
+p0 EM ESPERA: 3045 (falta o registo 3034)
+p0 EM ESPERA: 3046 (falta o registo 3034)
+p0 DESCARTADO (simulação): 3047
+p0 DESCARTADO (simulação): 3048
+p0 EM ESPERA: 3049 (falta o registo 3034)
+p0 DESCARTADO (simulação): 3050
+p0 EM ESPERA: 3051 (falta o registo 3034)
+p0 EM ESPERA: 3052 (falta o registo 3034)
+p0 EM ESPERA: 3053 (falta o registo 3034)
+p0 RECUPERAÇÃO: 3034..3038 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3034
+p0 RECUPERADO: 3035
+p0 RECUPERADO: 3036
+p0 RECUPERADO: 3037
+p0 RECUPERADO: 3038
+p0 aplicado (estava retido): 3039;S05;18.1;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3040;S09;24.3;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3054
+p0 EM ESPERA: 3055 (falta o registo 3041)
+p0 EM ESPERA: 3056 (falta o registo 3041)
+p0 RECUPERAÇÃO: 3041..3041 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3041
+p0 aplicado (estava retido): 3042;S02;22.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3043;S01;21.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3044;S01;17.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3045;S07;17.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3046;S08;15.0;2026-10-20T16:44:56
+p0 EM ESPERA: 3057 (falta o registo 3047)
+p0 EM ESPERA: 3058 (falta o registo 3047)
+p0 DESCARTADO (simulação): 3059
+p0 EM ESPERA: 3060 (falta o registo 3047)
+p0 EM ESPERA: 3061 (falta o registo 3047)
+p0 EM ESPERA: 3062 (falta o registo 3047)
+p0 RECUPERAÇÃO: 3047..3048 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3047
+p0 RECUPERADO: 3048
+p0 aplicado (estava retido): 3049;S04;17.1;2026-10-20T16:44:56
+p0 EM ESPERA: 3063 (falta o registo 3050)
+p0 RECUPERAÇÃO: 3050..3050 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3050
+p0 aplicado (estava retido): 3051;S01;27.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3052;S09;20.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3053;S07;26.4;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3064
+p0 EM ESPERA: 3065 (falta o registo 3054)
+p0 EM ESPERA: 3066 (falta o registo 3054)
+p0 EM ESPERA: 3067 (falta o registo 3054)
+p0 RECUPERAÇÃO: 3054..3054 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3054
+p0 aplicado (estava retido): 3055;S02;18.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3056;S01;26.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3057;S02;20.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3058;S03;20.7;2026-10-20T16:44:56
+p0 EM ESPERA: 3068 (falta o registo 3059)
+p0 EM ESPERA: 3069 (falta o registo 3059)
+p0 EM ESPERA: 3070 (falta o registo 3059)
+p0 EM ESPERA: 3071 (falta o registo 3059)
+p0 RECUPERAÇÃO: 3059..3059 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3059
+p0 aplicado (estava retido): 3060;S02;27.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3061;S09;20.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3062;S06;24.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3063;S09;17.6;2026-10-20T16:44:56
+p0 EM ESPERA: 3072 (falta o registo 3064)
+p0 EM ESPERA: 3073 (falta o registo 3064)
+p0 DESCARTADO (simulação): 3074
+p0 EM ESPERA: 3075 (falta o registo 3064)
+p0 DESCARTADO (simulação): 3076
+p0 EM ESPERA: 3077 (falta o registo 3064)
+p0 RECUPERAÇÃO: 3064..3064 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3064
+p0 aplicado (estava retido): 3065;S07;17.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3066;S09;28.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3067;S08;17.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3068;S05;29.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3069;S09;21.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3070;S03;29.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3071;S08;18.1;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3072;S02;21.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3073;S03;15.7;2026-10-20T16:44:56
+p0 EM ESPERA: 3078 (falta o registo 3074)
+p0 EM ESPERA: 3079 (falta o registo 3074)
+p0 EM ESPERA: 3080 (falta o registo 3074)
+p0 EM ESPERA: 3081 (falta o registo 3074)
+p0 EM ESPERA: 3082 (falta o registo 3074)
+p0 EM ESPERA: 3083 (falta o registo 3074)
+p0 EM ESPERA: 3084 (falta o registo 3074)
+p0 EM ESPERA: 3085 (falta o registo 3074)
+p0 EM ESPERA: 3086 (falta o registo 3074)
+p0 RECUPERAÇÃO: 3074..3074 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3074
+p0 aplicado (estava retido): 3075;S08;15.6;2026-10-20T16:44:56
+p0 EM ESPERA: 3087 (falta o registo 3076)
+p0 RECUPERAÇÃO: 3076..3076 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3076
+p0 aplicado (estava retido): 3077;S09;24.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3078;S05;16.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3079;S08;17.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3080;S10;21.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3081;S06;25.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3082;S02;25.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3083;S06;23.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3084;S05;27.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3085;S01;20.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3086;S06;20.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3087;S07;27.6;2026-10-20T16:44:56
+p0 aplicado: 3088;S07;21.3;2026-10-20T16:44:56
+p0 aplicado: 3089;S02;18.9;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3090
+p0 EM ESPERA: 3091 (falta o registo 3090)
+p0 EM ESPERA: 3092 (falta o registo 3090)
+p0 EM ESPERA: 3093 (falta o registo 3090)
+p0 EM ESPERA: 3094 (falta o registo 3090)
+p0 EM ESPERA: 3095 (falta o registo 3090)
+p0 EM ESPERA: 3096 (falta o registo 3090)
+p0 DESCARTADO (simulação): 3097
+p0 EM ESPERA: 3098 (falta o registo 3090)
+p0 EM ESPERA: 3099 (falta o registo 3090)
+p0 EM ESPERA: 3100 (falta o registo 3090)
+p0 EM ESPERA: 3101 (falta o registo 3090)
+p0 EM ESPERA: 3102 (falta o registo 3090)
+p0 RECUPERAÇÃO: 3090..3090 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3090
+p0 aplicado (estava retido): 3091;S03;23.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3092;S01;24.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3093;S07;28.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3094;S07;28.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3095;S10;23.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3096;S06;29.7;2026-10-20T16:44:56
+p0 EM ESPERA: 3103 (falta o registo 3097)
+p0 EM ESPERA: 3104 (falta o registo 3097)
+p0 EM ESPERA: 3105 (falta o registo 3097)
+p0 EM ESPERA: 3106 (falta o registo 3097)
+p0 EM ESPERA: 3107 (falta o registo 3097)
+p0 EM ESPERA: 3108 (falta o registo 3097)
+p0 RECUPERAÇÃO: 3097..3097 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3097
+p0 aplicado (estava retido): 3098;S07;20.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3099;S10;22.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3100;S02;29.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3101;S04;28.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3102;S05;28.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3103;S05;22.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3104;S10;19.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3105;S06;20.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3106;S07;23.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3107;S10;20.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3108;S08;19.6;2026-10-20T16:44:56
+p0 aplicado: 3109;S03;20.1;2026-10-20T16:44:56
+p0 aplicado: 3110;S10;16.7;2026-10-20T16:44:56
+p0 aplicado: 3111;S10;29.2;2026-10-20T16:44:56
+p0 aplicado: 3112;S04;27.2;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3113
+p0 EM ESPERA: 3114 (falta o registo 3113)
+p0 DESCARTADO (simulação): 3115
+p0 EM ESPERA: 3116 (falta o registo 3113)
+p0 EM ESPERA: 3117 (falta o registo 3113)
+p0 DESCARTADO (simulação): 3118
+p0 EM ESPERA: 3119 (falta o registo 3113)
+p0 EM ESPERA: 3120 (falta o registo 3113)
+p0 EM ESPERA: 3121 (falta o registo 3113)
+p0 EM ESPERA: 3122 (falta o registo 3113)
+p0 EM ESPERA: 3123 (falta o registo 3113)
+p0 EM ESPERA: 3124 (falta o registo 3113)
+p0 EM ESPERA: 3125 (falta o registo 3113)
+p0 EM ESPERA: 3126 (falta o registo 3113)
+p0 RECUPERAÇÃO: 3113..3113 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3113
+p0 aplicado (estava retido): 3114;S07;21.9;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3127
+p0 DESCARTADO (simulação): 3128
+p0 EM ESPERA: 3129 (falta o registo 3115)
+p0 RECUPERAÇÃO: 3115..3115 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3115
+p0 aplicado (estava retido): 3116;S02;19.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3117;S04;28.8;2026-10-20T16:44:56
+p0 EM ESPERA: 3130 (falta o registo 3118)
+p0 EM ESPERA: 3131 (falta o registo 3118)
+p0 RECUPERAÇÃO: 3118..3118 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3118
+p0 aplicado (estava retido): 3119;S05;19.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3120;S01;26.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3121;S05;18.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3122;S03;19.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3123;S05;26.4;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3124;S07;21.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3125;S03;18.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3126;S02;27.1;2026-10-20T16:44:56
+p0 EM ESPERA: 3132 (falta o registo 3127)
+p0 DESCARTADO (simulação): 3133
+p0 EM ESPERA: 3134 (falta o registo 3127)
+p0 EM ESPERA: 3135 (falta o registo 3127)
+p0 EM ESPERA: 3136 (falta o registo 3127)
+p0 EM ESPERA: 3137 (falta o registo 3127)
+p0 EM ESPERA: 3138 (falta o registo 3127)
+p0 DESCARTADO (simulação): 3139
+p0 EM ESPERA: 3140 (falta o registo 3127)
+p0 EM ESPERA: 3141 (falta o registo 3127)
+p0 RECUPERAÇÃO: 3127..3128 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3127
+p0 RECUPERADO: 3128
+p0 aplicado (estava retido): 3129;S02;25.1;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3130;S02;23.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3131;S03;19.3;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3132;S06;24.2;2026-10-20T16:44:56
+p0 DESCARTADO (simulação): 3142
+p0 EM ESPERA: 3143 (falta o registo 3133)
+p0 EM ESPERA: 3144 (falta o registo 3133)
+p0 EM ESPERA: 3145 (falta o registo 3133)
+p0 EM ESPERA: 3146 (falta o registo 3133)
+p0 RECUPERAÇÃO: 3133..3133 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3133
+p0 aplicado (estava retido): 3134;S04;26.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3135;S10;29.0;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3136;S04;25.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3137;S03;24.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3138;S01;20.2;2026-10-20T16:44:56
+p0 EM ESPERA: 3147 (falta o registo 3139)
+p0 DESCARTADO (simulação): 3148
+p0 DESCARTADO (simulação): 3149
+p0 EM ESPERA: 3150 (falta o registo 3139)
+p0 EM ESPERA: 3151 (falta o registo 3139)
+p0 EM ESPERA: 3152 (falta o registo 3139)
+p0 EM ESPERA: 3153 (falta o registo 3139)
+p0 RECUPERAÇÃO: 3139..3139 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3139
+p0 aplicado (estava retido): 3140;S10;21.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3141;S06;17.2;2026-10-20T16:44:56
+p0 EM ESPERA: 3154 (falta o registo 3142)
+p0 EM ESPERA: 3155 (falta o registo 3142)
+p0 RECUPERAÇÃO: 3142..3142 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3142
+p0 aplicado (estava retido): 3143;S01;20.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3144;S01;29.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3145;S08;29.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3146;S03;22.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3147;S01;24.1;2026-10-20T16:44:56
+p0 EM ESPERA: 3156 (falta o registo 3148)
+p0 EM ESPERA: 3157 (falta o registo 3148)
+p0 EM ESPERA: 3158 (falta o registo 3148)
+p0 EM ESPERA: 3159 (falta o registo 3148)
+p0 EM ESPERA: 3160 (falta o registo 3148)
+p0 RECUPERAÇÃO: 3148..3149 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3148
+p0 RECUPERADO: 3149
+p0 aplicado (estava retido): 3150;S01;20.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3151;S05;27.2;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3152;S10;22.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3153;S03;28.6;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3154;S09;19.8;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3155;S02;23.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3156;S06;24.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3157;S05;25.7;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3158;S05;17.5;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3159;S01;16.9;2026-10-20T16:44:56
+p0 aplicado (estava retido): 3160;S10;26.7;2026-10-20T16:44:56
+p0 aplicado: 3161;S06;20.3;2026-10-20T16:44:57
+p0 aplicado: 3162;S04;29.3;2026-10-20T16:44:57
+p0 aplicado: 3163;S07;18.8;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3164
+p0 DESCARTADO (simulação): 3165
+p0 DESCARTADO (simulação): 3166
+p0 EM ESPERA: 3167 (falta o registo 3164)
+p0 EM ESPERA: 3168 (falta o registo 3164)
+p0 EM ESPERA: 3169 (falta o registo 3164)
+p0 EM ESPERA: 3170 (falta o registo 3164)
+p0 EM ESPERA: 3171 (falta o registo 3164)
+p0 EM ESPERA: 3172 (falta o registo 3164)
+p0 EM ESPERA: 3173 (falta o registo 3164)
+p0 EM ESPERA: 3174 (falta o registo 3164)
+p0 EM ESPERA: 3175 (falta o registo 3164)
+p0 DESCARTADO (simulação): 3176
+p0 EM ESPERA: 3177 (falta o registo 3164)
+p0 DESCARTADO (simulação): 3178
+p0 EM ESPERA: 3179 (falta o registo 3164)
+p0 RECUPERAÇÃO: 3164..3166 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3164
+p0 RECUPERADO: 3165
+p0 RECUPERADO: 3166
+p0 aplicado (estava retido): 3167;S03;21.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3168;S03;16.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3169;S06;26.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3170;S09;15.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3171;S07;28.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3172;S01;29.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3173;S06;18.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3174;S09;28.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3175;S07;22.7;2026-10-20T16:44:57
+p0 EM ESPERA: 3180 (falta o registo 3176)
+p0 DESCARTADO (simulação): 3181
+p0 DESCARTADO (simulação): 3182
+p0 EM ESPERA: 3183 (falta o registo 3176)
+p0 EM ESPERA: 3184 (falta o registo 3176)
+p0 EM ESPERA: 3185 (falta o registo 3176)
+p0 EM ESPERA: 3186 (falta o registo 3176)
+p0 EM ESPERA: 3187 (falta o registo 3176)
+p0 EM ESPERA: 3188 (falta o registo 3176)
+p0 EM ESPERA: 3189 (falta o registo 3176)
+p0 DESCARTADO (simulação): 3190
+p0 EM ESPERA: 3191 (falta o registo 3176)
+p0 RECUPERAÇÃO: 3176..3176 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3176
+p0 aplicado (estava retido): 3177;S02;17.2;2026-10-20T16:44:57
+p0 EM ESPERA: 3192 (falta o registo 3178)
+p0 RECUPERAÇÃO: 3178..3178 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3178
+p0 aplicado (estava retido): 3179;S06;22.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3180;S08;24.2;2026-10-20T16:44:57
+p0 EM ESPERA: 3193 (falta o registo 3181)
+p0 EM ESPERA: 3194 (falta o registo 3181)
+p0 RECUPERAÇÃO: 3181..3182 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3181
+p0 RECUPERADO: 3182
+p0 aplicado (estava retido): 3183;S03;27.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3184;S09;24.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3185;S04;27.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3186;S10;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3187;S06;16.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3188;S08;25.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3189;S03;27.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3195 (falta o registo 3190)
+p0 EM ESPERA: 3196 (falta o registo 3190)
+p0 DESCARTADO (simulação): 3197
+p0 EM ESPERA: 3198 (falta o registo 3190)
+p0 EM ESPERA: 3199 (falta o registo 3190)
+p0 EM ESPERA: 3200 (falta o registo 3190)
+p0 EM ESPERA: 3201 (falta o registo 3190)
+p0 EM ESPERA: 3202 (falta o registo 3190)
+p0 RECUPERAÇÃO: 3190..3190 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3190
+p0 aplicado (estava retido): 3191;S03;24.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3192;S06;21.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3193;S04;21.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3194;S02;19.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3195;S01;20.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3196;S07;21.7;2026-10-20T16:44:57
+p0 EM ESPERA: 3203 (falta o registo 3197)
+p0 EM ESPERA: 3204 (falta o registo 3197)
+p0 DESCARTADO (simulação): 3205
+p0 EM ESPERA: 3206 (falta o registo 3197)
+p0 EM ESPERA: 3207 (falta o registo 3197)
+p0 EM ESPERA: 3208 (falta o registo 3197)
+p0 DESCARTADO (simulação): 3209
+p0 EM ESPERA: 3210 (falta o registo 3197)
+p0 RECUPERAÇÃO: 3197..3197 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3197
+p0 aplicado (estava retido): 3198;S01;25.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3199;S01;26.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3200;S07;17.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3201;S05;15.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3202;S10;17.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3203;S06;23.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3204;S02;19.7;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3211
+p0 EM ESPERA: 3212 (falta o registo 3205)
+p0 EM ESPERA: 3213 (falta o registo 3205)
+p0 EM ESPERA: 3214 (falta o registo 3205)
+p0 EM ESPERA: 3215 (falta o registo 3205)
+p0 DESCARTADO (simulação): 3216
+p0 EM ESPERA: 3217 (falta o registo 3205)
+p0 DESCARTADO (simulação): 3218
+p0 EM ESPERA: 3219 (falta o registo 3205)
+p0 EM ESPERA: 3220 (falta o registo 3205)
+p0 RECUPERAÇÃO: 3205..3205 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3205
+p0 aplicado (estava retido): 3206;S03;21.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3207;S09;28.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3208;S04;24.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3221 (falta o registo 3209)
+p0 EM ESPERA: 3222 (falta o registo 3209)
+p0 EM ESPERA: 3223 (falta o registo 3209)
+p0 RECUPERAÇÃO: 3209..3209 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3209
+p0 aplicado (estava retido): 3210;S06;21.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3224 (falta o registo 3211)
+p0 RECUPERAÇÃO: 3211..3211 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3211
+p0 aplicado (estava retido): 3212;S07;24.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3213;S04;17.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3214;S02;18.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3215;S04;27.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3225 (falta o registo 3216)
+p0 EM ESPERA: 3226 (falta o registo 3216)
+p0 EM ESPERA: 3227 (falta o registo 3216)
+p0 EM ESPERA: 3228 (falta o registo 3216)
+p0 RECUPERAÇÃO: 3216..3216 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3216
+p0 aplicado (estava retido): 3217;S09;15.2;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3229
+p0 EM ESPERA: 3230 (falta o registo 3218)
+p0 RECUPERAÇÃO: 3218..3218 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3218
+p0 aplicado (estava retido): 3219;S07;29.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3220;S10;16.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3221;S01;25.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3222;S09;28.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3223;S05;19.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3224;S07;16.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3225;S08;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3226;S04;27.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3227;S03;25.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3228;S10;27.0;2026-10-20T16:44:57
+p0 EM ESPERA: 3231 (falta o registo 3229)
+p0 EM ESPERA: 3232 (falta o registo 3229)
+p0 EM ESPERA: 3233 (falta o registo 3229)
+p0 EM ESPERA: 3234 (falta o registo 3229)
+p0 EM ESPERA: 3235 (falta o registo 3229)
+p0 EM ESPERA: 3236 (falta o registo 3229)
+p0 DESCARTADO (simulação): 3237
+p0 EM ESPERA: 3238 (falta o registo 3229)
+p0 EM ESPERA: 3239 (falta o registo 3229)
+p0 EM ESPERA: 3240 (falta o registo 3229)
+p0 EM ESPERA: 3241 (falta o registo 3229)
+p0 RECUPERAÇÃO: 3229..3229 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3229
+p0 aplicado (estava retido): 3230;S09;17.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3231;S10;16.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3232;S10;29.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3233;S01;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3234;S05;28.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3235;S05;28.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3236;S01;20.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3242 (falta o registo 3237)
+p0 DESCARTADO (simulação): 3243
+p0 EM ESPERA: 3244 (falta o registo 3237)
+p0 EM ESPERA: 3245 (falta o registo 3237)
+p0 EM ESPERA: 3246 (falta o registo 3237)
+p0 EM ESPERA: 3247 (falta o registo 3237)
+p0 EM ESPERA: 3248 (falta o registo 3237)
+p0 EM ESPERA: 3249 (falta o registo 3237)
+p0 RECUPERAÇÃO: 3237..3237 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3237
+p0 aplicado (estava retido): 3238;S08;18.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3239;S01;16.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3240;S05;26.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3241;S02;26.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3242;S03;18.7;2026-10-20T16:44:57
+p0 EM ESPERA: 3250 (falta o registo 3243)
+p0 EM ESPERA: 3251 (falta o registo 3243)
+p0 EM ESPERA: 3252 (falta o registo 3243)
+p0 EM ESPERA: 3253 (falta o registo 3243)
+p0 EM ESPERA: 3254 (falta o registo 3243)
+p0 RECUPERAÇÃO: 3243..3243 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3243
+p0 aplicado (estava retido): 3244;S06;20.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3245;S04;18.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3246;S08;25.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3247;S04;24.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3248;S06;24.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3249;S04;29.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3250;S08;28.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3251;S10;24.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3252;S09;22.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3253;S09;26.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3254;S10;26.1;2026-10-20T16:44:57
+p0 aplicado: 3255;S03;27.1;2026-10-20T16:44:57
+p0 aplicado: 3256;S03;17.1;2026-10-20T16:44:57
+p0 aplicado: 3257;S10;29.7;2026-10-20T16:44:57
+p0 aplicado: 3258;S01;28.0;2026-10-20T16:44:57
+p0 aplicado: 3259;S03;21.8;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3260
+p0 EM ESPERA: 3261 (falta o registo 3260)
+p0 EM ESPERA: 3262 (falta o registo 3260)
+p0 EM ESPERA: 3263 (falta o registo 3260)
+p0 EM ESPERA: 3264 (falta o registo 3260)
+p0 EM ESPERA: 3265 (falta o registo 3260)
+p0 EM ESPERA: 3266 (falta o registo 3260)
+p0 EM ESPERA: 3267 (falta o registo 3260)
+p0 DESCARTADO (simulação): 3268
+p0 EM ESPERA: 3269 (falta o registo 3260)
+p0 EM ESPERA: 3270 (falta o registo 3260)
+p0 DESCARTADO (simulação): 3271
+p0 EM ESPERA: 3272 (falta o registo 3260)
+p0 EM ESPERA: 3273 (falta o registo 3260)
+p0 RECUPERAÇÃO: 3260..3260 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3260
+p0 aplicado (estava retido): 3261;S04;16.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3262;S03;21.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3263;S05;17.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3264;S04;25.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3265;S07;18.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3266;S03;24.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3267;S07;18.4;2026-10-20T16:44:57
+p0 EM ESPERA: 3274 (falta o registo 3268)
+p0 EM ESPERA: 3275 (falta o registo 3268)
+p0 EM ESPERA: 3276 (falta o registo 3268)
+p0 EM ESPERA: 3277 (falta o registo 3268)
+p0 EM ESPERA: 3278 (falta o registo 3268)
+p0 EM ESPERA: 3279 (falta o registo 3268)
+p0 EM ESPERA: 3280 (falta o registo 3268)
+p0 RECUPERAÇÃO: 3268..3268 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3268
+p0 aplicado (estava retido): 3269;S02;16.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3270;S10;15.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3281 (falta o registo 3271)
+p0 EM ESPERA: 3282 (falta o registo 3271)
+p0 RECUPERAÇÃO: 3271..3271 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3271
+p0 aplicado (estava retido): 3272;S02;16.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3273;S05;18.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3274;S09;26.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3275;S07;18.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3276;S04;16.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3277;S04;16.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3278;S08;22.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3279;S10;22.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3280;S06;16.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3281;S03;26.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3282;S06;15.8;2026-10-20T16:44:57
+p0 aplicado: 3283;S01;27.0;2026-10-20T16:44:57
+p0 aplicado: 3284;S06;27.2;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3285
+p0 DESCARTADO (simulação): 3286
+p0 DESCARTADO (simulação): 3287
+p0 EM ESPERA: 3288 (falta o registo 3285)
+p0 EM ESPERA: 3289 (falta o registo 3285)
+p0 EM ESPERA: 3290 (falta o registo 3285)
+p0 EM ESPERA: 3291 (falta o registo 3285)
+p0 DESCARTADO (simulação): 3292
+p0 EM ESPERA: 3293 (falta o registo 3285)
+p0 EM ESPERA: 3294 (falta o registo 3285)
+p0 EM ESPERA: 3295 (falta o registo 3285)
+p0 EM ESPERA: 3296 (falta o registo 3285)
+p0 EM ESPERA: 3297 (falta o registo 3285)
+p0 DESCARTADO (simulação): 3298
+p0 EM ESPERA: 3299 (falta o registo 3285)
+p0 EM ESPERA: 3300 (falta o registo 3285)
+p0 RECUPERAÇÃO: 3285..3287 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3285
+p0 RECUPERADO: 3286
+p0 RECUPERADO: 3287
+p0 aplicado (estava retido): 3288;S05;27.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3289;S09;26.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3290;S09;26.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3291;S02;19.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3301 (falta o registo 3292)
+p0 EM ESPERA: 3302 (falta o registo 3292)
+p0 EM ESPERA: 3303 (falta o registo 3292)
+p0 EM ESPERA: 3304 (falta o registo 3292)
+p0 RECUPERAÇÃO: 3292..3292 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3292
+p0 aplicado (estava retido): 3293;S05;25.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3294;S05;24.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3295;S03;24.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3296;S08;17.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3297;S07;28.0;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3305
+p0 EM ESPERA: 3306 (falta o registo 3298)
+p0 DESCARTADO (simulação): 3307
+p0 DESCARTADO (simulação): 3308
+p0 EM ESPERA: 3309 (falta o registo 3298)
+p0 EM ESPERA: 3310 (falta o registo 3298)
+p0 DESCARTADO (simulação): 3311
+p0 DESCARTADO (simulação): 3312
+p0 EM ESPERA: 3313 (falta o registo 3298)
+p0 EM ESPERA: 3314 (falta o registo 3298)
+p0 RECUPERAÇÃO: 3298..3298 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3298
+p0 aplicado (estava retido): 3299;S04;23.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3300;S04;20.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3301;S10;19.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3302;S04;28.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3303;S06;29.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3304;S06;20.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3315 (falta o registo 3305)
+p0 EM ESPERA: 3316 (falta o registo 3305)
+p0 EM ESPERA: 3317 (falta o registo 3305)
+p0 EM ESPERA: 3318 (falta o registo 3305)
+p0 EM ESPERA: 3319 (falta o registo 3305)
+p0 EM ESPERA: 3320 (falta o registo 3305)
+p0 RECUPERAÇÃO: 3305..3305 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3305
+p0 aplicado (estava retido): 3306;S08;29.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3321 (falta o registo 3307)
+p0 RECUPERAÇÃO: 3307..3308 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3307
+p0 RECUPERADO: 3308
+p0 aplicado (estava retido): 3309;S09;28.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3310;S04;28.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3322 (falta o registo 3311)
+p0 EM ESPERA: 3323 (falta o registo 3311)
+p0 RECUPERAÇÃO: 3311..3312 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3311
+p0 RECUPERADO: 3312
+p0 aplicado (estava retido): 3313;S05;23.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3314;S04;17.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3315;S06;25.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3316;S05;19.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3317;S07;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3318;S02;25.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3319;S06;15.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3320;S04;29.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3321;S01;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3322;S10;15.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3323;S07;21.6;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3324
+p0 EM ESPERA: 3325 (falta o registo 3324)
+p0 EM ESPERA: 3326 (falta o registo 3324)
+p0 EM ESPERA: 3327 (falta o registo 3324)
+p0 EM ESPERA: 3328 (falta o registo 3324)
+p0 EM ESPERA: 3329 (falta o registo 3324)
+p0 EM ESPERA: 3330 (falta o registo 3324)
+p0 EM ESPERA: 3331 (falta o registo 3324)
+p0 EM ESPERA: 3332 (falta o registo 3324)
+p0 EM ESPERA: 3333 (falta o registo 3324)
+p0 DESCARTADO (simulação): 3334
+p0 EM ESPERA: 3335 (falta o registo 3324)
+p0 EM ESPERA: 3336 (falta o registo 3324)
+p0 RECUPERAÇÃO: 3324..3324 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3324
+p0 aplicado (estava retido): 3325;S10;27.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3326;S08;20.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3327;S04;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3328;S10;18.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3329;S03;21.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3330;S07;20.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3331;S09;17.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3332;S07;25.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3333;S08;28.3;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3337
+p0 EM ESPERA: 3338 (falta o registo 3334)
+p0 EM ESPERA: 3339 (falta o registo 3334)
+p0 EM ESPERA: 3340 (falta o registo 3334)
+p0 EM ESPERA: 3341 (falta o registo 3334)
+p0 EM ESPERA: 3342 (falta o registo 3334)
+p0 DESCARTADO (simulação): 3343
+p0 EM ESPERA: 3344 (falta o registo 3334)
+p0 EM ESPERA: 3345 (falta o registo 3334)
+p0 EM ESPERA: 3346 (falta o registo 3334)
+p0 DESCARTADO (simulação): 3347
+p0 EM ESPERA: 3348 (falta o registo 3334)
+p0 RECUPERAÇÃO: 3334..3334 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3334
+p0 aplicado (estava retido): 3335;S08;28.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3336;S05;27.2;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3349
+p0 EM ESPERA: 3350 (falta o registo 3337)
+p0 EM ESPERA: 3351 (falta o registo 3337)
+p0 RECUPERAÇÃO: 3337..3337 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3337
+p0 aplicado (estava retido): 3338;S07;17.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3339;S07;23.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3340;S07;19.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3341;S10;18.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3342;S10;25.8;2026-10-20T16:44:57
+p0 EM ESPERA: 3352 (falta o registo 3343)
+p0 EM ESPERA: 3353 (falta o registo 3343)
+p0 EM ESPERA: 3354 (falta o registo 3343)
+p0 DESCARTADO (simulação): 3355
+p0 EM ESPERA: 3356 (falta o registo 3343)
+p0 EM ESPERA: 3357 (falta o registo 3343)
+p0 RECUPERAÇÃO: 3343..3343 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3343
+p0 aplicado (estava retido): 3344;S10;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3345;S07;17.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3346;S09;29.8;2026-10-20T16:44:57
+p0 EM ESPERA: 3358 (falta o registo 3347)
+p0 DESCARTADO (simulação): 3359
+p0 EM ESPERA: 3360 (falta o registo 3347)
+p0 EM ESPERA: 3361 (falta o registo 3347)
+p0 RECUPERAÇÃO: 3347..3347 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3347
+p0 aplicado (estava retido): 3348;S10;25.6;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3362
+p0 EM ESPERA: 3363 (falta o registo 3349)
+p0 RECUPERAÇÃO: 3349..3349 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3349
+p0 aplicado (estava retido): 3350;S04;16.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3351;S08;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3352;S01;27.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3353;S03;21.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3354;S07;16.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3364 (falta o registo 3355)
+p0 EM ESPERA: 3365 (falta o registo 3355)
+p0 EM ESPERA: 3366 (falta o registo 3355)
+p0 EM ESPERA: 3367 (falta o registo 3355)
+p0 EM ESPERA: 3368 (falta o registo 3355)
+p0 RECUPERAÇÃO: 3355..3355 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3355
+p0 aplicado (estava retido): 3356;S02;18.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3357;S07;29.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3358;S01;27.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3369 (falta o registo 3359)
+p0 EM ESPERA: 3370 (falta o registo 3359)
+p0 EM ESPERA: 3371 (falta o registo 3359)
+p0 RECUPERAÇÃO: 3359..3359 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3359
+p0 aplicado (estava retido): 3360;S02;23.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3361;S09;20.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3372 (falta o registo 3362)
+p0 EM ESPERA: 3373 (falta o registo 3362)
+p0 RECUPERAÇÃO: 3362..3362 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3362
+p0 aplicado (estava retido): 3363;S02;25.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3364;S05;27.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3365;S10;18.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3366;S04;15.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3367;S10;19.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3368;S10;26.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3369;S01;22.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3370;S09;20.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3371;S09;16.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3372;S09;23.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3373;S03;15.0;2026-10-20T16:44:57
+p0 aplicado: 3374;S02;24.1;2026-10-20T16:44:57
+p0 aplicado: 3375;S06;28.4;2026-10-20T16:44:57
+p0 aplicado: 3376;S05;20.7;2026-10-20T16:44:57
+p0 aplicado: 3377;S05;21.7;2026-10-20T16:44:57
+p0 aplicado: 3378;S05;22.1;2026-10-20T16:44:57
+p0 aplicado: 3379;S04;24.5;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3380
+p0 EM ESPERA: 3381 (falta o registo 3380)
+p0 EM ESPERA: 3382 (falta o registo 3380)
+p0 DESCARTADO (simulação): 3383
+p0 EM ESPERA: 3384 (falta o registo 3380)
+p0 EM ESPERA: 3385 (falta o registo 3380)
+p0 EM ESPERA: 3386 (falta o registo 3380)
+p0 EM ESPERA: 3387 (falta o registo 3380)
+p0 EM ESPERA: 3388 (falta o registo 3380)
+p0 EM ESPERA: 3389 (falta o registo 3380)
+p0 EM ESPERA: 3390 (falta o registo 3380)
+p0 EM ESPERA: 3391 (falta o registo 3380)
+p0 EM ESPERA: 3392 (falta o registo 3380)
+p0 RECUPERAÇÃO: 3380..3380 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3380
+p0 aplicado (estava retido): 3381;S10;17.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3382;S03;15.4;2026-10-20T16:44:57
+p0 EM ESPERA: 3393 (falta o registo 3383)
+p0 EM ESPERA: 3394 (falta o registo 3383)
+p0 RECUPERAÇÃO: 3383..3383 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3383
+p0 aplicado (estava retido): 3384;S07;19.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3385;S08;22.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3386;S06;28.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3387;S02;16.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3388;S09;25.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3389;S07;16.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3390;S09;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3391;S05;17.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3392;S01;28.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3393;S06;24.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3394;S05;29.5;2026-10-20T16:44:57
+p0 aplicado: 3395;S10;30.0;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3396
+p0 EM ESPERA: 3397 (falta o registo 3396)
+p0 EM ESPERA: 3398 (falta o registo 3396)
+p0 DESCARTADO (simulação): 3399
+p0 EM ESPERA: 3400 (falta o registo 3396)
+p0 EM ESPERA: 3401 (falta o registo 3396)
+p0 EM ESPERA: 3402 (falta o registo 3396)
+p0 EM ESPERA: 3403 (falta o registo 3396)
+p0 DESCARTADO (simulação): 3404
+p0 EM ESPERA: 3405 (falta o registo 3396)
+p0 EM ESPERA: 3406 (falta o registo 3396)
+p0 DESCARTADO (simulação): 3407
+p0 EM ESPERA: 3408 (falta o registo 3396)
+p0 EM ESPERA: 3409 (falta o registo 3396)
+p0 EM ESPERA: 3410 (falta o registo 3396)
+p0 RECUPERAÇÃO: 3396..3396 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3396
+p0 aplicado (estava retido): 3397;S09;26.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3398;S04;25.5;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3411
+p0 EM ESPERA: 3412 (falta o registo 3399)
+p0 EM ESPERA: 3413 (falta o registo 3399)
+p0 RECUPERAÇÃO: 3399..3399 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3399
+p0 aplicado (estava retido): 3400;S02;17.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3401;S03;28.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3402;S01;23.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3403;S03;18.4;2026-10-20T16:44:57
+p0 EM ESPERA: 3414 (falta o registo 3404)
+p0 EM ESPERA: 3415 (falta o registo 3404)
+p0 EM ESPERA: 3416 (falta o registo 3404)
+p0 DESCARTADO (simulação): 3417
+p0 EM ESPERA: 3418 (falta o registo 3404)
+p0 RECUPERAÇÃO: 3404..3404 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3404
+p0 aplicado (estava retido): 3405;S02;15.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3406;S08;17.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3419 (falta o registo 3407)
+p0 EM ESPERA: 3420 (falta o registo 3407)
+p0 RECUPERAÇÃO: 3407..3407 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3407
+p0 aplicado (estava retido): 3408;S08;29.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3409;S05;28.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3410;S07;18.4;2026-10-20T16:44:57
+p0 EM ESPERA: 3421 (falta o registo 3411)
+p0 EM ESPERA: 3422 (falta o registo 3411)
+p0 EM ESPERA: 3423 (falta o registo 3411)
+p0 RECUPERAÇÃO: 3411..3411 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3411
+p0 aplicado (estava retido): 3412;S09;28.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3413;S10;22.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3414;S03;18.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3415;S01;25.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3416;S02;24.5;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3424
+p0 EM ESPERA: 3425 (falta o registo 3417)
+p0 EM ESPERA: 3426 (falta o registo 3417)
+p0 DESCARTADO (simulação): 3427
+p0 DESCARTADO (simulação): 3428
+p0 EM ESPERA: 3429 (falta o registo 3417)
+p0 EM ESPERA: 3430 (falta o registo 3417)
+p0 EM ESPERA: 3431 (falta o registo 3417)
+p0 RECUPERAÇÃO: 3417..3417 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3417
+p0 aplicado (estava retido): 3418;S10;25.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3419;S09;21.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3420;S04;17.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3421;S01;27.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3422;S05;18.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3423;S02;24.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3432 (falta o registo 3424)
+p0 EM ESPERA: 3433 (falta o registo 3424)
+p0 EM ESPERA: 3434 (falta o registo 3424)
+p0 DESCARTADO (simulação): 3435
+p0 EM ESPERA: 3436 (falta o registo 3424)
+p0 EM ESPERA: 3437 (falta o registo 3424)
+p0 DESCARTADO (simulação): 3438
+p0 EM ESPERA: 3439 (falta o registo 3424)
+p0 RECUPERAÇÃO: 3424..3424 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3424
+p0 aplicado (estava retido): 3425;S01;16.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3426;S02;18.4;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3440
+p0 EM ESPERA: 3441 (falta o registo 3427)
+p0 DESCARTADO (simulação): 3442
+p0 EM ESPERA: 3443 (falta o registo 3427)
+p0 RECUPERAÇÃO: 3427..3428 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3427
+p0 RECUPERADO: 3428
+p0 aplicado (estava retido): 3429;S06;26.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3430;S02;29.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3431;S06;15.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3432;S05;25.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3433;S02;16.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3434;S04;16.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3444 (falta o registo 3435)
+p0 EM ESPERA: 3445 (falta o registo 3435)
+p0 DESCARTADO (simulação): 3446
+p0 EM ESPERA: 3447 (falta o registo 3435)
+p0 EM ESPERA: 3448 (falta o registo 3435)
+p0 EM ESPERA: 3449 (falta o registo 3435)
+p0 EM ESPERA: 3450 (falta o registo 3435)
+p0 RECUPERAÇÃO: 3435..3435 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3435
+p0 aplicado (estava retido): 3436;S03;24.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3437;S08;22.7;2026-10-20T16:44:57
+p0 EM ESPERA: 3451 (falta o registo 3438)
+p0 EM ESPERA: 3452 (falta o registo 3438)
+p0 RECUPERAÇÃO: 3438..3438 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3438
+p0 aplicado (estava retido): 3439;S08;17.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3453 (falta o registo 3440)
+p0 RECUPERAÇÃO: 3440..3440 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3440
+p0 aplicado (estava retido): 3441;S08;19.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3454 (falta o registo 3442)
+p0 RECUPERAÇÃO: 3442..3442 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3442
+p0 aplicado (estava retido): 3443;S04;16.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3444;S03;29.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3445;S06;29.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3455 (falta o registo 3446)
+p0 EM ESPERA: 3456 (falta o registo 3446)
+p0 EM ESPERA: 3457 (falta o registo 3446)
+p0 RECUPERAÇÃO: 3446..3446 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3446
+p0 aplicado (estava retido): 3447;S04;17.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3448;S04;24.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3449;S01;19.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3450;S07;17.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3451;S05;20.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3452;S08;26.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3453;S09;21.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3454;S07;28.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3455;S10;24.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3456;S10;28.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3457;S06;19.1;2026-10-20T16:44:57
+p0 aplicado: 3458;S02;27.6;2026-10-20T16:44:57
+p0 aplicado: 3459;S02;29.7;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3460
+p0 EM ESPERA: 3461 (falta o registo 3460)
+p0 EM ESPERA: 3462 (falta o registo 3460)
+p0 EM ESPERA: 3463 (falta o registo 3460)
+p0 EM ESPERA: 3464 (falta o registo 3460)
+p0 EM ESPERA: 3465 (falta o registo 3460)
+p0 DESCARTADO (simulação): 3466
+p0 EM ESPERA: 3467 (falta o registo 3460)
+p0 EM ESPERA: 3468 (falta o registo 3460)
+p0 DESCARTADO (simulação): 3469
+p0 EM ESPERA: 3470 (falta o registo 3460)
+p0 EM ESPERA: 3471 (falta o registo 3460)
+p0 EM ESPERA: 3472 (falta o registo 3460)
+p0 DESCARTADO (simulação): 3473
+p0 EM ESPERA: 3474 (falta o registo 3460)
+p0 RECUPERAÇÃO: 3460..3460 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3460
+p0 aplicado (estava retido): 3461;S05;20.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3462;S06;15.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3463;S03;15.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3464;S10;19.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3465;S08;19.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3475 (falta o registo 3466)
+p0 EM ESPERA: 3476 (falta o registo 3466)
+p0 EM ESPERA: 3477 (falta o registo 3466)
+p0 EM ESPERA: 3478 (falta o registo 3466)
+p0 EM ESPERA: 3479 (falta o registo 3466)
+p0 RECUPERAÇÃO: 3466..3466 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3466
+p0 aplicado (estava retido): 3467;S09;28.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3468;S05;15.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3481 (falta o registo 3469)
+p0 DESCARTADO (simulação): 3482
+p0 EM ESPERA: 3483 (falta o registo 3469)
+p0 RECUPERAÇÃO: 3469..3469 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3469
+p0 aplicado (estava retido): 3470;S01;23.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3471;S02;20.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3472;S08;20.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3484 (falta o registo 3473)
+p0 EM ESPERA: 3485 (falta o registo 3473)
+p0 EM ESPERA: 3486 (falta o registo 3473)
+p0 RECUPERAÇÃO: 3473..3473 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3473
+p0 aplicado (estava retido): 3474;S10;21.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3475;S07;21.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3476;S08;22.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3477;S06;19.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3478;S04;19.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3479;S01;20.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3487 (falta o registo 3480)
+p0 EM ESPERA: 3488 (falta o registo 3480)
+p0 DESCARTADO (simulação): 3489
+p0 EM ESPERA: 3490 (falta o registo 3480)
+p0 EM ESPERA: 3491 (falta o registo 3480)
+p0 EM ESPERA: 3492 (falta o registo 3480)
+p0 EM ESPERA: 3493 (falta o registo 3480)
+p0 RECUPERAÇÃO: 3480..3480 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3480
+p0 aplicado (estava retido): 3481;S01;25.4;2026-10-20T16:44:57
+p0 EM ESPERA: 3494 (falta o registo 3482)
+p0 RECUPERAÇÃO: 3482..3482 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3482
+p0 aplicado (estava retido): 3483;S01;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3484;S07;22.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3485;S08;23.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3486;S06;22.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3487;S07;26.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3488;S04;22.8;2026-10-20T16:44:57
+p0 EM ESPERA: 3495 (falta o registo 3489)
+p0 DESCARTADO (simulação): 3496
+p0 EM ESPERA: 3497 (falta o registo 3489)
+p0 EM ESPERA: 3498 (falta o registo 3489)
+p0 EM ESPERA: 3499 (falta o registo 3489)
+p0 EM ESPERA: 3500 (falta o registo 3489)
+p0 DESCARTADO (simulação): 3501
+p0 EM ESPERA: 3502 (falta o registo 3489)
+p0 RECUPERAÇÃO: 3489..3489 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3489
+p0 aplicado (estava retido): 3490;S05;24.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3491;S03;16.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3492;S01;16.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3493;S02;20.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3494;S06;21.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3495;S09;26.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3503 (falta o registo 3496)
+p0 DESCARTADO (simulação): 3504
+p0 DESCARTADO (simulação): 3505
+p0 EM ESPERA: 3506 (falta o registo 3496)
+p0 DESCARTADO (simulação): 3507
+p0 EM ESPERA: 3508 (falta o registo 3496)
+p0 EM ESPERA: 3509 (falta o registo 3496)
+p0 DESCARTADO (simulação): 3510
+p0 EM ESPERA: 3511 (falta o registo 3496)
+p0 EM ESPERA: 3512 (falta o registo 3496)
+p0 RECUPERAÇÃO: 3496..3496 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3496
+p0 aplicado (estava retido): 3497;S06;19.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3498;S02;22.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3499;S03;26.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3500;S02;19.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3513 (falta o registo 3501)
+p0 EM ESPERA: 3514 (falta o registo 3501)
+p0 EM ESPERA: 3515 (falta o registo 3501)
+p0 EM ESPERA: 3516 (falta o registo 3501)
+p0 RECUPERAÇÃO: 3501..3501 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3501
+p0 aplicado (estava retido): 3502;S05;29.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3503;S06;26.6;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3517
+p0 DESCARTADO (simulação): 3518
+p0 EM ESPERA: 3519 (falta o registo 3504)
+p0 EM ESPERA: 3520 (falta o registo 3504)
+p0 RECUPERAÇÃO: 3504..3505 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3504
+p0 RECUPERADO: 3505
+p0 aplicado (estava retido): 3506;S03;17.0;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3521
+p0 DESCARTADO (simulação): 3522
+p0 EM ESPERA: 3523 (falta o registo 3507)
+p0 RECUPERAÇÃO: 3507..3507 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3507
+p0 aplicado (estava retido): 3508;S06;20.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3509;S01;20.7;2026-10-20T16:44:57
+p0 EM ESPERA: 3524 (falta o registo 3510)
+p0 EM ESPERA: 3525 (falta o registo 3510)
+p0 RECUPERAÇÃO: 3510..3510 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3510
+p0 aplicado (estava retido): 3511;S05;18.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3512;S05;21.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3513;S09;15.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3514;S06;28.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3515;S09;15.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3516;S02;21.0;2026-10-20T16:44:57
+p0 EM ESPERA: 3526 (falta o registo 3517)
+p0 EM ESPERA: 3527 (falta o registo 3517)
+p0 EM ESPERA: 3528 (falta o registo 3517)
+p0 EM ESPERA: 3529 (falta o registo 3517)
+p0 DESCARTADO (simulação): 3530
+p0 DESCARTADO (simulação): 3531
+p0 EM ESPERA: 3532 (falta o registo 3517)
+p0 EM ESPERA: 3533 (falta o registo 3517)
+p0 RECUPERAÇÃO: 3517..3518 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3517
+p0 RECUPERADO: 3518
+p0 aplicado (estava retido): 3519;S03;20.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3520;S04;29.3;2026-10-20T16:44:57
+p0 EM ESPERA: 3534 (falta o registo 3521)
+p0 EM ESPERA: 3535 (falta o registo 3521)
+p0 RECUPERAÇÃO: 3521..3522 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3521
+p0 RECUPERADO: 3522
+p0 aplicado (estava retido): 3523;S09;23.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3524;S03;22.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3525;S07;15.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3526;S09;22.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3527;S09;16.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3528;S01;28.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3529;S04;28.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3536 (falta o registo 3530)
+p0 EM ESPERA: 3537 (falta o registo 3530)
+p0 EM ESPERA: 3538 (falta o registo 3530)
+p0 EM ESPERA: 3539 (falta o registo 3530)
+p0 EM ESPERA: 3540 (falta o registo 3530)
+p0 EM ESPERA: 3541 (falta o registo 3530)
+p0 EM ESPERA: 3542 (falta o registo 3530)
+p0 RECUPERAÇÃO: 3530..3531 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3530
+p0 RECUPERADO: 3531
+p0 aplicado (estava retido): 3532;S02;29.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3533;S02;17.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3534;S10;29.2;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3535;S10;28.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3536;S05;21.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3537;S10;15.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3538;S06;23.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3539;S02;29.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3540;S07;19.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3541;S02;21.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3542;S06;21.0;2026-10-20T16:44:57
+p0 aplicado: 3543;S05;23.4;2026-10-20T16:44:57
+p0 aplicado: 3544;S06;22.2;2026-10-20T16:44:57
+p0 aplicado: 3545;S02;26.0;2026-10-20T16:44:57
+p0 aplicado: 3546;S07;23.4;2026-10-20T16:44:57
+p0 aplicado: 3547;S09;29.2;2026-10-20T16:44:57
+p0 aplicado: 3548;S08;20.9;2026-10-20T16:44:57
+p0 aplicado: 3549;S10;23.3;2026-10-20T16:44:57
+p0 aplicado: 3550;S03;15.9;2026-10-20T16:44:57
+p0 aplicado: 3551;S10;18.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3553 (falta o registo 3552)
+p0 EM ESPERA: 3554 (falta o registo 3552)
+p0 DESCARTADO (simulação): 3555
+p0 DESCARTADO (simulação): 3556
+p0 EM ESPERA: 3557 (falta o registo 3552)
+p0 DESCARTADO (simulação): 3558
+p0 EM ESPERA: 3559 (falta o registo 3552)
+p0 EM ESPERA: 3560 (falta o registo 3552)
+p0 EM ESPERA: 3561 (falta o registo 3552)
+p0 EM ESPERA: 3562 (falta o registo 3552)
+p0 EM ESPERA: 3563 (falta o registo 3552)
+p0 DESCARTADO (simulação): 3564
+p0 EM ESPERA: 3565 (falta o registo 3552)
+p0 EM ESPERA: 3566 (falta o registo 3552)
+p0 EM ESPERA: 3567 (falta o registo 3552)
+p0 RECUPERAÇÃO: 3552..3552 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3552
+p0 aplicado (estava retido): 3553;S03;27.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3554;S05;15.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3568 (falta o registo 3555)
+p0 EM ESPERA: 3569 (falta o registo 3555)
+p0 RECUPERAÇÃO: 3555..3556 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3555
+p0 RECUPERADO: 3556
+p0 aplicado (estava retido): 3557;S02;21.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3570 (falta o registo 3558)
+p0 RECUPERAÇÃO: 3558..3558 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3558
+p0 aplicado (estava retido): 3559;S09;28.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3560;S02;18.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3561;S02;27.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3562;S04;27.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3563;S08;18.3;2026-10-20T16:44:57
+p0 DESCARTADO (simulação): 3571
+p0 EM ESPERA: 3572 (falta o registo 3564)
+p0 DESCARTADO (simulação): 3573
+p0 EM ESPERA: 3574 (falta o registo 3564)
+p0 EM ESPERA: 3575 (falta o registo 3564)
+p0 EM ESPERA: 3576 (falta o registo 3564)
+p0 DESCARTADO (simulação): 3577
+p0 EM ESPERA: 3578 (falta o registo 3564)
+p0 RECUPERAÇÃO: 3564..3564 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3564
+p0 aplicado (estava retido): 3565;S03;21.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3566;S02;29.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3567;S08;27.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3568;S05;16.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3569;S06;27.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3570;S02;20.9;2026-10-20T16:44:57
+p0 EM ESPERA: 3579 (falta o registo 3571)
+p0 EM ESPERA: 3580 (falta o registo 3571)
+p0 EM ESPERA: 3581 (falta o registo 3571)
+p0 DESCARTADO (simulação): 3582
+p0 EM ESPERA: 3583 (falta o registo 3571)
+p0 DESCARTADO (simulação): 3584
+p0 EM ESPERA: 3585 (falta o registo 3571)
+p0 EM ESPERA: 3586 (falta o registo 3571)
+p0 RECUPERAÇÃO: 3571..3571 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3571
+p0 aplicado (estava retido): 3572;S01;21.6;2026-10-20T16:44:57
+p0 EM ESPERA: 3587 (falta o registo 3573)
+p0 RECUPERAÇÃO: 3573..3573 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3573
+p0 aplicado (estava retido): 3574;S04;28.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3575;S09;18.6;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3576;S08;20.2;2026-10-20T16:44:57
+p0 EM ESPERA: 3588 (falta o registo 3577)
+p0 EM ESPERA: 3589 (falta o registo 3577)
+p0 EM ESPERA: 3590 (falta o registo 3577)
+p0 RECUPERAÇÃO: 3577..3577 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3577
+p0 aplicado (estava retido): 3578;S08;22.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3579;S04;18.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3580;S09;20.0;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3581;S01;20.5;2026-10-20T16:44:57
+p0 EM ESPERA: 3591 (falta o registo 3582)
+p0 EM ESPERA: 3592 (falta o registo 3582)
+p0 EM ESPERA: 3593 (falta o registo 3582)
+p0 EM ESPERA: 3594 (falta o registo 3582)
+p0 RECUPERAÇÃO: 3582..3582 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3582
+p0 aplicado (estava retido): 3583;S02;28.1;2026-10-20T16:44:57
+p0 EM ESPERA: 3595 (falta o registo 3584)
+p0 RECUPERAÇÃO: 3584..3584 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3584
+p0 aplicado (estava retido): 3585;S03;26.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3586;S02;24.1;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3587;S02;17.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3588;S07;23.9;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3589;S09;21.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3590;S10;24.4;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3591;S05;22.5;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3592;S10;19.8;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3593;S08;21.3;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3594;S08;16.7;2026-10-20T16:44:57
+p0 aplicado (estava retido): 3595;S08;21.5;2026-10-20T16:44:57
+p0 aplicado: 3596;S10;19.2;2026-10-20T16:44:57
+p0 aplicado: 3597;S08;25.0;2026-10-20T16:44:57
+p0 aplicado: 3598;S06;18.3;2026-10-20T16:44:57
+p0 aplicado: 3599;S10;21.5;2026-10-20T16:44:58
+p0 aplicado: 3600;S06;15.7;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3601
+p0 EM ESPERA: 3602 (falta o registo 3601)
+p0 EM ESPERA: 3603 (falta o registo 3601)
+p0 EM ESPERA: 3604 (falta o registo 3601)
+p0 EM ESPERA: 3605 (falta o registo 3601)
+p0 DESCARTADO (simulação): 3606
+p0 EM ESPERA: 3607 (falta o registo 3601)
+p0 EM ESPERA: 3608 (falta o registo 3601)
+p0 EM ESPERA: 3609 (falta o registo 3601)
+p0 DESCARTADO (simulação): 3610
+p0 EM ESPERA: 3611 (falta o registo 3601)
+p0 DESCARTADO (simulação): 3612
+p0 DESCARTADO (simulação): 3613
+p0 EM ESPERA: 3614 (falta o registo 3601)
+p0 EM ESPERA: 3615 (falta o registo 3601)
+p0 EM ESPERA: 3616 (falta o registo 3601)
+p0 RECUPERAÇÃO: 3601..3601 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3601
+p0 aplicado (estava retido): 3602;S09;18.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3603;S06;29.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3604;S08;29.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3605;S09;19.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3617 (falta o registo 3606)
+p0 EM ESPERA: 3618 (falta o registo 3606)
+p0 DESCARTADO (simulação): 3619
+p0 EM ESPERA: 3620 (falta o registo 3606)
+p0 DESCARTADO (simulação): 3621
+p0 EM ESPERA: 3622 (falta o registo 3606)
+p0 RECUPERAÇÃO: 3606..3606 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3606
+p0 aplicado (estava retido): 3607;S01;27.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3608;S03;26.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3609;S05;21.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3623 (falta o registo 3610)
+p0 DESCARTADO (simulação): 3624
+p0 EM ESPERA: 3625 (falta o registo 3610)
+p0 EM ESPERA: 3626 (falta o registo 3610)
+p0 RECUPERAÇÃO: 3610..3610 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3610
+p0 aplicado (estava retido): 3611;S09;17.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3627 (falta o registo 3612)
+p0 RECUPERAÇÃO: 3612..3613 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3612
+p0 RECUPERADO: 3613
+p0 aplicado (estava retido): 3614;S05;15.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3615;S06;19.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3616;S08;25.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3617;S03;28.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3618;S04;21.9;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3628
+p0 EM ESPERA: 3629 (falta o registo 3619)
+p0 EM ESPERA: 3630 (falta o registo 3619)
+p0 EM ESPERA: 3631 (falta o registo 3619)
+p0 EM ESPERA: 3632 (falta o registo 3619)
+p0 EM ESPERA: 3633 (falta o registo 3619)
+p0 RECUPERAÇÃO: 3619..3619 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3619
+p0 aplicado (estava retido): 3620;S04;28.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3634 (falta o registo 3621)
+p0 RECUPERAÇÃO: 3621..3621 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3621
+p0 aplicado (estava retido): 3622;S03;28.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3623;S09;16.0;2026-10-20T16:44:58
+p0 EM ESPERA: 3635 (falta o registo 3624)
+p0 EM ESPERA: 3636 (falta o registo 3624)
+p0 RECUPERAÇÃO: 3624..3624 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3624
+p0 aplicado (estava retido): 3625;S02;18.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3626;S02;15.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3627;S06;23.3;2026-10-20T16:44:58
+p0 EM ESPERA: 3637 (falta o registo 3628)
+p0 EM ESPERA: 3638 (falta o registo 3628)
+p0 DESCARTADO (simulação): 3639
+p0 EM ESPERA: 3640 (falta o registo 3628)
+p0 RECUPERAÇÃO: 3628..3628 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3628
+p0 aplicado (estava retido): 3629;S03;29.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3630;S04;23.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3631;S08;15.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3632;S02;27.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3633;S09;27.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3634;S09;16.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3635;S04;22.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3636;S09;15.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3637;S06;15.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3638;S01;15.0;2026-10-20T16:44:58
+p0 EM ESPERA: 3641 (falta o registo 3639)
+p0 EM ESPERA: 3642 (falta o registo 3639)
+p0 EM ESPERA: 3643 (falta o registo 3639)
+p0 DESCARTADO (simulação): 3644
+p0 EM ESPERA: 3645 (falta o registo 3639)
+p0 EM ESPERA: 3646 (falta o registo 3639)
+p0 EM ESPERA: 3647 (falta o registo 3639)
+p0 EM ESPERA: 3648 (falta o registo 3639)
+p0 EM ESPERA: 3649 (falta o registo 3639)
+p0 EM ESPERA: 3650 (falta o registo 3639)
+p0 DESCARTADO (simulação): 3651
+p0 EM ESPERA: 3652 (falta o registo 3639)
+p0 RECUPERAÇÃO: 3639..3639 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3639
+p0 aplicado (estava retido): 3640;S08;15.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3641;S07;17.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3642;S02;27.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3643;S07;28.6;2026-10-20T16:44:58
+p0 EM ESPERA: 3653 (falta o registo 3644)
+p0 DESCARTADO (simulação): 3654
+p0 DESCARTADO (simulação): 3655
+p0 EM ESPERA: 3656 (falta o registo 3644)
+p0 EM ESPERA: 3657 (falta o registo 3644)
+p0 EM ESPERA: 3658 (falta o registo 3644)
+p0 RECUPERAÇÃO: 3644..3644 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3644
+p0 aplicado (estava retido): 3645;S07;26.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3646;S03;24.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3647;S05;26.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3648;S02;19.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3649;S03;22.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3650;S05;28.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3659 (falta o registo 3651)
+p0 EM ESPERA: 3660 (falta o registo 3651)
+p0 EM ESPERA: 3661 (falta o registo 3651)
+p0 DESCARTADO (simulação): 3662
+p0 DESCARTADO (simulação): 3663
+p0 EM ESPERA: 3664 (falta o registo 3651)
+p0 EM ESPERA: 3665 (falta o registo 3651)
+p0 EM ESPERA: 3666 (falta o registo 3651)
+p0 RECUPERAÇÃO: 3651..3651 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3651
+p0 aplicado (estava retido): 3652;S03;18.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3653;S03;19.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3667 (falta o registo 3654)
+p0 EM ESPERA: 3668 (falta o registo 3654)
+p0 RECUPERAÇÃO: 3654..3655 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3654
+p0 RECUPERADO: 3655
+p0 aplicado (estava retido): 3656;S08;15.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3657;S05;25.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3658;S03;25.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3659;S09;15.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3660;S07;19.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3661;S01;26.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3669 (falta o registo 3662)
+p0 EM ESPERA: 3670 (falta o registo 3662)
+p0 DESCARTADO (simulação): 3671
+p0 EM ESPERA: 3672 (falta o registo 3662)
+p0 EM ESPERA: 3673 (falta o registo 3662)
+p0 EM ESPERA: 3674 (falta o registo 3662)
+p0 EM ESPERA: 3675 (falta o registo 3662)
+p0 RECUPERAÇÃO: 3662..3663 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3662
+p0 RECUPERADO: 3663
+p0 aplicado (estava retido): 3664;S04;23.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3665;S09;26.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3666;S10;21.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3667;S07;27.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3668;S04;15.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3669;S01;25.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3670;S03;23.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3676 (falta o registo 3671)
+p0 DESCARTADO (simulação): 3677
+p0 EM ESPERA: 3678 (falta o registo 3671)
+p0 EM ESPERA: 3679 (falta o registo 3671)
+p0 DESCARTADO (simulação): 3680
+p0 EM ESPERA: 3681 (falta o registo 3671)
+p0 DESCARTADO (simulação): 3682
+p0 EM ESPERA: 3683 (falta o registo 3671)
+p0 DESCARTADO (simulação): 3684
+p0 EM ESPERA: 3685 (falta o registo 3671)
+p0 EM ESPERA: 3686 (falta o registo 3671)
+p0 RECUPERAÇÃO: 3671..3671 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3671
+p0 aplicado (estava retido): 3672;S08;28.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3673;S07;22.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3674;S07;16.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3675;S01;15.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3676;S08;23.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3687 (falta o registo 3677)
+p0 EM ESPERA: 3688 (falta o registo 3677)
+p0 EM ESPERA: 3689 (falta o registo 3677)
+p0 EM ESPERA: 3690 (falta o registo 3677)
+p0 EM ESPERA: 3691 (falta o registo 3677)
+p0 RECUPERAÇÃO: 3677..3677 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3677
+p0 aplicado (estava retido): 3678;S03;18.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3679;S05;16.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3692 (falta o registo 3680)
+p0 EM ESPERA: 3693 (falta o registo 3680)
+p0 RECUPERAÇÃO: 3680..3680 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3680
+p0 aplicado (estava retido): 3681;S06;19.6;2026-10-20T16:44:58
+p0 EM ESPERA: 3694 (falta o registo 3682)
+p0 RECUPERAÇÃO: 3682..3682 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3682
+p0 aplicado (estava retido): 3683;S05;20.0;2026-10-20T16:44:58
+p0 EM ESPERA: 3695 (falta o registo 3684)
+p0 RECUPERAÇÃO: 3684..3684 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3684
+p0 aplicado (estava retido): 3685;S03;24.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3686;S02;22.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3687;S02;25.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3688;S06;27.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3689;S08;15.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3690;S01;21.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3691;S04;26.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3692;S06;26.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3693;S01;27.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3694;S04;15.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3695;S05;25.1;2026-10-20T16:44:58
+p0 aplicado: 3696;S03;24.6;2026-10-20T16:44:58
+p0 aplicado: 3697;S07;21.2;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3698
+p0 EM ESPERA: 3699 (falta o registo 3698)
+p0 EM ESPERA: 3700 (falta o registo 3698)
+p0 EM ESPERA: 3701 (falta o registo 3698)
+p0 DESCARTADO (simulação): 3702
+p0 EM ESPERA: 3703 (falta o registo 3698)
+p0 EM ESPERA: 3705 (falta o registo 3698)
+p0 DESCARTADO (simulação): 3706
+p0 EM ESPERA: 3707 (falta o registo 3698)
+p0 EM ESPERA: 3708 (falta o registo 3698)
+p0 EM ESPERA: 3709 (falta o registo 3698)
+p0 EM ESPERA: 3710 (falta o registo 3698)
+p0 EM ESPERA: 3711 (falta o registo 3698)
+p0 EM ESPERA: 3712 (falta o registo 3698)
+p0 RECUPERAÇÃO: 3698..3698 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3698
+p0 aplicado (estava retido): 3699;S04;20.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3700;S01;24.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3701;S08;24.8;2026-10-20T16:44:58
+p0 EM ESPERA: 3713 (falta o registo 3702)
+p0 EM ESPERA: 3714 (falta o registo 3702)
+p0 EM ESPERA: 3715 (falta o registo 3702)
+p0 RECUPERAÇÃO: 3702..3702 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3702
+p0 aplicado (estava retido): 3703;S10;28.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3716 (falta o registo 3704)
+p0 RECUPERAÇÃO: 3704..3704 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3704
+p0 aplicado (estava retido): 3705;S06;17.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3717 (falta o registo 3706)
+p0 RECUPERAÇÃO: 3706..3706 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3706
+p0 aplicado (estava retido): 3707;S03;26.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3708;S06;29.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3709;S04;23.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3710;S03;22.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3711;S05;23.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3712;S10;19.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3713;S07;29.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3714;S07;20.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3715;S10;16.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3716;S06;26.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3717;S09;25.9;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3718
+p0 EM ESPERA: 3719 (falta o registo 3718)
+p0 EM ESPERA: 3720 (falta o registo 3718)
+p0 EM ESPERA: 3721 (falta o registo 3718)
+p0 EM ESPERA: 3722 (falta o registo 3718)
+p0 EM ESPERA: 3723 (falta o registo 3718)
+p0 DESCARTADO (simulação): 3724
+p0 EM ESPERA: 3725 (falta o registo 3718)
+p0 DESCARTADO (simulação): 3726
+p0 EM ESPERA: 3727 (falta o registo 3718)
+p0 EM ESPERA: 3728 (falta o registo 3718)
+p0 EM ESPERA: 3729 (falta o registo 3718)
+p0 EM ESPERA: 3730 (falta o registo 3718)
+p0 EM ESPERA: 3731 (falta o registo 3718)
+p0 RECUPERAÇÃO: 3718..3718 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3718
+p0 aplicado (estava retido): 3719;S09;17.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3720;S08;20.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3721;S06;25.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3722;S05;26.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3723;S05;18.5;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3732
+p0 EM ESPERA: 3733 (falta o registo 3724)
+p0 EM ESPERA: 3734 (falta o registo 3724)
+p0 EM ESPERA: 3735 (falta o registo 3724)
+p0 EM ESPERA: 3736 (falta o registo 3724)
+p0 EM ESPERA: 3737 (falta o registo 3724)
+p0 RECUPERAÇÃO: 3724..3724 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3724
+p0 aplicado (estava retido): 3725;S07;15.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3738 (falta o registo 3726)
+p0 RECUPERAÇÃO: 3726..3726 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3726
+p0 aplicado (estava retido): 3727;S05;26.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3728;S10;18.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3729;S02;29.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3730;S04;15.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3731;S07;16.3;2026-10-20T16:44:58
+p0 EM ESPERA: 3739 (falta o registo 3732)
+p0 EM ESPERA: 3740 (falta o registo 3732)
+p0 EM ESPERA: 3741 (falta o registo 3732)
+p0 EM ESPERA: 3742 (falta o registo 3732)
+p0 EM ESPERA: 3743 (falta o registo 3732)
+p0 RECUPERAÇÃO: 3732..3732 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3732
+p0 aplicado (estava retido): 3733;S10;21.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3734;S08;23.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3735;S07;23.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3736;S08;25.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3737;S08;20.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3738;S03;20.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3739;S03;16.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3740;S10;19.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3741;S05;18.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3742;S01;19.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3743;S05;25.7;2026-10-20T16:44:58
+p0 aplicado: 3744;S09;18.8;2026-10-20T16:44:58
+p0 aplicado: 3745;S02;28.6;2026-10-20T16:44:58
+p0 aplicado: 3746;S02;18.3;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3747
+p0 EM ESPERA: 3748 (falta o registo 3747)
+p0 EM ESPERA: 3749 (falta o registo 3747)
+p0 EM ESPERA: 3750 (falta o registo 3747)
+p0 EM ESPERA: 3751 (falta o registo 3747)
+p0 EM ESPERA: 3752 (falta o registo 3747)
+p0 DESCARTADO (simulação): 3753
+p0 EM ESPERA: 3754 (falta o registo 3747)
+p0 EM ESPERA: 3755 (falta o registo 3747)
+p0 EM ESPERA: 3756 (falta o registo 3747)
+p0 EM ESPERA: 3757 (falta o registo 3747)
+p0 EM ESPERA: 3758 (falta o registo 3747)
+p0 EM ESPERA: 3759 (falta o registo 3747)
+p0 RECUPERAÇÃO: 3747..3747 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3747
+p0 aplicado (estava retido): 3748;S06;29.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3749;S07;16.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3750;S03;28.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3751;S02;15.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3752;S03;24.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3761 (falta o registo 3753)
+p0 EM ESPERA: 3762 (falta o registo 3753)
+p0 EM ESPERA: 3763 (falta o registo 3753)
+p0 EM ESPERA: 3764 (falta o registo 3753)
+p0 EM ESPERA: 3765 (falta o registo 3753)
+p0 RECUPERAÇÃO: 3753..3753 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3753
+p0 aplicado (estava retido): 3754;S08;15.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3755;S03;20.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3756;S03;28.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3757;S04;27.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3758;S04;27.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3759;S09;28.1;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3766
+p0 DESCARTADO (simulação): 3767
+p0 EM ESPERA: 3768 (falta o registo 3760)
+p0 EM ESPERA: 3769 (falta o registo 3760)
+p0 EM ESPERA: 3770 (falta o registo 3760)
+p0 DESCARTADO (simulação): 3771
+p0 EM ESPERA: 3772 (falta o registo 3760)
+p0 DESCARTADO (simulação): 3773
+p0 DESCARTADO (simulação): 3774
+p0 EM ESPERA: 3775 (falta o registo 3760)
+p0 DESCARTADO (simulação): 3776
+p0 EM ESPERA: 3777 (falta o registo 3760)
+p0 RECUPERAÇÃO: 3760..3760 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3760
+p0 aplicado (estava retido): 3761;S08;22.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3762;S10;20.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3763;S01;23.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3764;S09;29.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3765;S08;22.3;2026-10-20T16:44:58
+p0 EM ESPERA: 3778 (falta o registo 3766)
+p0 EM ESPERA: 3779 (falta o registo 3766)
+p0 EM ESPERA: 3780 (falta o registo 3766)
+p0 EM ESPERA: 3781 (falta o registo 3766)
+p0 EM ESPERA: 3782 (falta o registo 3766)
+p0 RECUPERAÇÃO: 3766..3767 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3766
+p0 RECUPERADO: 3767
+p0 aplicado (estava retido): 3768;S02;16.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3769;S07;27.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3770;S07;23.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3783 (falta o registo 3771)
+p0 EM ESPERA: 3784 (falta o registo 3771)
+p0 EM ESPERA: 3785 (falta o registo 3771)
+p0 RECUPERAÇÃO: 3771..3771 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3771
+p0 aplicado (estava retido): 3772;S03;19.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3786 (falta o registo 3773)
+p0 RECUPERAÇÃO: 3773..3774 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3773
+p0 RECUPERADO: 3774
+p0 aplicado (estava retido): 3775;S09;29.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3787 (falta o registo 3776)
+p0 RECUPERAÇÃO: 3776..3776 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3776
+p0 aplicado (estava retido): 3777;S03;25.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3778;S10;23.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3779;S06;19.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3780;S03;19.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3781;S03;28.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3782;S06;20.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3783;S04;28.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3784;S07;15.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3785;S08;26.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3786;S02;24.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3787;S04;15.4;2026-10-20T16:44:58
+p0 aplicado: 3788;S05;22.6;2026-10-20T16:44:58
+p0 aplicado: 3789;S10;26.2;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3790
+p0 EM ESPERA: 3791 (falta o registo 3790)
+p0 EM ESPERA: 3792 (falta o registo 3790)
+p0 EM ESPERA: 3793 (falta o registo 3790)
+p0 EM ESPERA: 3794 (falta o registo 3790)
+p0 EM ESPERA: 3795 (falta o registo 3790)
+p0 EM ESPERA: 3796 (falta o registo 3790)
+p0 EM ESPERA: 3797 (falta o registo 3790)
+p0 EM ESPERA: 3798 (falta o registo 3790)
+p0 DESCARTADO (simulação): 3799
+p0 EM ESPERA: 3800 (falta o registo 3790)
+p0 EM ESPERA: 3801 (falta o registo 3790)
+p0 EM ESPERA: 3802 (falta o registo 3790)
+p0 RECUPERAÇÃO: 3790..3790 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3790
+p0 aplicado (estava retido): 3791;S10;27.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3792;S09;21.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3793;S09;18.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3794;S03;29.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3795;S01;17.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3796;S05;17.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3797;S06;27.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3798;S08;16.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3803 (falta o registo 3799)
+p0 EM ESPERA: 3804 (falta o registo 3799)
+p0 EM ESPERA: 3805 (falta o registo 3799)
+p0 DESCARTADO (simulação): 3806
+p0 EM ESPERA: 3807 (falta o registo 3799)
+p0 EM ESPERA: 3808 (falta o registo 3799)
+p0 EM ESPERA: 3809 (falta o registo 3799)
+p0 EM ESPERA: 3810 (falta o registo 3799)
+p0 EM ESPERA: 3811 (falta o registo 3799)
+p0 RECUPERAÇÃO: 3799..3799 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3799
+p0 aplicado (estava retido): 3800;S01;20.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3801;S06;25.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3802;S05;25.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3803;S09;21.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3804;S01;17.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3805;S07;18.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3812 (falta o registo 3806)
+p0 EM ESPERA: 3813 (falta o registo 3806)
+p0 EM ESPERA: 3814 (falta o registo 3806)
+p0 EM ESPERA: 3815 (falta o registo 3806)
+p0 EM ESPERA: 3816 (falta o registo 3806)
+p0 EM ESPERA: 3817 (falta o registo 3806)
+p0 RECUPERAÇÃO: 3806..3806 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3806
+p0 aplicado (estava retido): 3807;S10;19.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3808;S05;15.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3809;S08;23.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3810;S09;24.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3811;S02;24.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3812;S09;24.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3813;S05;18.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3814;S09;26.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3815;S02;20.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3816;S08;21.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3817;S08;17.6;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3818
+p0 EM ESPERA: 3819 (falta o registo 3818)
+p0 EM ESPERA: 3820 (falta o registo 3818)
+p0 EM ESPERA: 3821 (falta o registo 3818)
+p0 EM ESPERA: 3822 (falta o registo 3818)
+p0 EM ESPERA: 3823 (falta o registo 3818)
+p0 EM ESPERA: 3824 (falta o registo 3818)
+p0 EM ESPERA: 3825 (falta o registo 3818)
+p0 EM ESPERA: 3826 (falta o registo 3818)
+p0 EM ESPERA: 3827 (falta o registo 3818)
+p0 DESCARTADO (simulação): 3828
+p0 EM ESPERA: 3829 (falta o registo 3818)
+p0 EM ESPERA: 3830 (falta o registo 3818)
+p0 RECUPERAÇÃO: 3818..3818 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3818
+p0 aplicado (estava retido): 3819;S05;19.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3820;S01;24.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3821;S07;21.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3822;S09;25.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3823;S02;19.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3824;S09;25.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3825;S04;21.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3826;S04;16.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3827;S02;18.0;2026-10-20T16:44:58
+p0 EM ESPERA: 3831 (falta o registo 3828)
+p0 DESCARTADO (simulação): 3832
+p0 EM ESPERA: 3833 (falta o registo 3828)
+p0 DESCARTADO (simulação): 3834
+p0 DESCARTADO (simulação): 3835
+p0 EM ESPERA: 3836 (falta o registo 3828)
+p0 EM ESPERA: 3837 (falta o registo 3828)
+p0 EM ESPERA: 3838 (falta o registo 3828)
+p0 EM ESPERA: 3839 (falta o registo 3828)
+p0 EM ESPERA: 3840 (falta o registo 3828)
+p0 EM ESPERA: 3841 (falta o registo 3828)
+p0 DESCARTADO (simulação): 3842
+p0 DESCARTADO (simulação): 3843
+p0 EM ESPERA: 3844 (falta o registo 3828)
+p0 RECUPERAÇÃO: 3828..3828 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3828
+p0 aplicado (estava retido): 3829;S05;18.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3830;S10;15.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3831;S07;23.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3845 (falta o registo 3832)
+p0 DESCARTADO (simulação): 3846
+p0 EM ESPERA: 3847 (falta o registo 3832)
+p0 DESCARTADO (simulação): 3848
+p0 DESCARTADO (simulação): 3849
+p0 EM ESPERA: 3850 (falta o registo 3832)
+p0 RECUPERAÇÃO: 3832..3832 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3832
+p0 aplicado (estava retido): 3833;S08;16.4;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3851
+p0 EM ESPERA: 3852 (falta o registo 3834)
+p0 RECUPERAÇÃO: 3834..3835 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3834
+p0 RECUPERADO: 3835
+p0 aplicado (estava retido): 3836;S06;29.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3837;S05;28.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3838;S09;19.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3839;S10;19.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3840;S01;18.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3841;S02;15.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3853 (falta o registo 3842)
+p0 EM ESPERA: 3854 (falta o registo 3842)
+p0 EM ESPERA: 3855 (falta o registo 3842)
+p0 DESCARTADO (simulação): 3856
+p0 EM ESPERA: 3857 (falta o registo 3842)
+p0 DESCARTADO (simulação): 3858
+p0 EM ESPERA: 3859 (falta o registo 3842)
+p0 DESCARTADO (simulação): 3860
+p0 DESCARTADO (simulação): 3861
+p0 EM ESPERA: 3862 (falta o registo 3842)
+p0 RECUPERAÇÃO: 3842..3843 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3842
+p0 RECUPERADO: 3843
+p0 aplicado (estava retido): 3844;S03;17.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3845;S06;18.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3863 (falta o registo 3846)
+p0 DESCARTADO (simulação): 3864
+p0 EM ESPERA: 3865 (falta o registo 3846)
+p0 RECUPERAÇÃO: 3846..3846 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3846
+p0 aplicado (estava retido): 3847;S02;21.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3866 (falta o registo 3848)
+p0 RECUPERAÇÃO: 3848..3849 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3848
+p0 RECUPERADO: 3849
+p0 aplicado (estava retido): 3850;S01;29.3;2026-10-20T16:44:58
+p0 EM ESPERA: 3867 (falta o registo 3851)
+p0 RECUPERAÇÃO: 3851..3851 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3851
+p0 aplicado (estava retido): 3852;S06;15.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3853;S05;24.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3854;S09;16.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3855;S01;22.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3868 (falta o registo 3856)
+p0 EM ESPERA: 3869 (falta o registo 3856)
+p0 EM ESPERA: 3870 (falta o registo 3856)
+p0 EM ESPERA: 3871 (falta o registo 3856)
+p0 RECUPERAÇÃO: 3856..3856 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3856
+p0 aplicado (estava retido): 3857;S10;17.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3872 (falta o registo 3858)
+p0 RECUPERAÇÃO: 3858..3858 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3858
+p0 aplicado (estava retido): 3859;S01;19.5;2026-10-20T16:44:58
+p0 EM ESPERA: 3873 (falta o registo 3860)
+p0 RECUPERAÇÃO: 3860..3861 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3860
+p0 RECUPERADO: 3861
+p0 aplicado (estava retido): 3862;S09;26.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3863;S08;25.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3874 (falta o registo 3864)
+p0 EM ESPERA: 3875 (falta o registo 3864)
+p0 RECUPERAÇÃO: 3864..3864 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3864
+p0 aplicado (estava retido): 3865;S07;16.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3866;S05;22.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3867;S04;28.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3868;S04;24.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3869;S05;29.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3870;S05;16.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3871;S06;27.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3872;S08;18.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3873;S02;16.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3874;S09;27.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3875;S10;27.3;2026-10-20T16:44:58
+p0 aplicado: 3876;S04;23.8;2026-10-20T16:44:58
+p0 aplicado: 3877;S04;23.0;2026-10-20T16:44:58
+p0 aplicado: 3878;S06;17.0;2026-10-20T16:44:58
+p0 aplicado: 3879;S07;17.3;2026-10-20T16:44:58
+p0 aplicado: 3880;S05;28.6;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3881
+p0 EM ESPERA: 3882 (falta o registo 3881)
+p0 EM ESPERA: 3883 (falta o registo 3881)
+p0 EM ESPERA: 3884 (falta o registo 3881)
+p0 EM ESPERA: 3885 (falta o registo 3881)
+p0 EM ESPERA: 3886 (falta o registo 3881)
+p0 DESCARTADO (simulação): 3887
+p0 EM ESPERA: 3888 (falta o registo 3881)
+p0 DESCARTADO (simulação): 3889
+p0 EM ESPERA: 3890 (falta o registo 3881)
+p0 EM ESPERA: 3891 (falta o registo 3881)
+p0 EM ESPERA: 3892 (falta o registo 3881)
+p0 EM ESPERA: 3893 (falta o registo 3881)
+p0 EM ESPERA: 3894 (falta o registo 3881)
+p0 RECUPERAÇÃO: 3881..3881 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3881
+p0 aplicado (estava retido): 3882;S08;16.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3883;S09;19.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3884;S10;26.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3885;S08;22.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3886;S10;18.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3895 (falta o registo 3887)
+p0 EM ESPERA: 3896 (falta o registo 3887)
+p0 DESCARTADO (simulação): 3897
+p0 DESCARTADO (simulação): 3898
+p0 DESCARTADO (simulação): 3899
+p0 EM ESPERA: 3900 (falta o registo 3887)
+p0 DESCARTADO (simulação): 3901
+p0 EM ESPERA: 3902 (falta o registo 3887)
+p0 EM ESPERA: 3903 (falta o registo 3887)
+p0 RECUPERAÇÃO: 3887..3887 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3887
+p0 aplicado (estava retido): 3888;S06;17.1;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3904
+p0 EM ESPERA: 3905 (falta o registo 3889)
+p0 RECUPERAÇÃO: 3889..3889 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3889
+p0 aplicado (estava retido): 3890;S06;28.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3891;S05;22.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3892;S09;16.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3893;S08;27.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3894;S10;29.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3895;S03;26.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3896;S09;15.8;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3906
+p0 EM ESPERA: 3907 (falta o registo 3897)
+p0 DESCARTADO (simulação): 3908
+p0 DESCARTADO (simulação): 3909
+p0 DESCARTADO (simulação): 3910
+p0 EM ESPERA: 3911 (falta o registo 3897)
+p0 DESCARTADO (simulação): 3912
+p0 EM ESPERA: 3913 (falta o registo 3897)
+p0 EM ESPERA: 3914 (falta o registo 3897)
+p0 EM ESPERA: 3915 (falta o registo 3897)
+p0 DESCARTADO (simulação): 3916
+p0 EM ESPERA: 3917 (falta o registo 3897)
+p0 EM ESPERA: 3918 (falta o registo 3897)
+p0 RECUPERAÇÃO: 3897..3899 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3897
+p0 RECUPERADO: 3898
+p0 RECUPERADO: 3899
+p0 aplicado (estava retido): 3900;S01;16.4;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3919
+p0 EM ESPERA: 3920 (falta o registo 3901)
+p0 RECUPERAÇÃO: 3901..3901 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3901
+p0 aplicado (estava retido): 3902;S04;17.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3903;S10;27.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3921 (falta o registo 3904)
+p0 EM ESPERA: 3922 (falta o registo 3904)
+p0 RECUPERAÇÃO: 3904..3904 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3904
+p0 aplicado (estava retido): 3905;S10;27.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3923 (falta o registo 3906)
+p0 RECUPERAÇÃO: 3906..3906 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3906
+p0 aplicado (estava retido): 3907;S09;29.6;2026-10-20T16:44:58
+p0 EM ESPERA: 3924 (falta o registo 3908)
+p0 RECUPERAÇÃO: 3908..3910 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3908
+p0 RECUPERADO: 3909
+p0 RECUPERADO: 3910
+p0 aplicado (estava retido): 3911;S09;15.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3925 (falta o registo 3912)
+p0 RECUPERAÇÃO: 3912..3912 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3912
+p0 aplicado (estava retido): 3913;S08;17.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3914;S08;26.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3915;S06;15.9;2026-10-20T16:44:58
+p0 EM ESPERA: 3926 (falta o registo 3916)
+p0 EM ESPERA: 3927 (falta o registo 3916)
+p0 EM ESPERA: 3928 (falta o registo 3916)
+p0 RECUPERAÇÃO: 3916..3916 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3916
+p0 aplicado (estava retido): 3917;S04;25.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3918;S09;28.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3929 (falta o registo 3919)
+p0 EM ESPERA: 3930 (falta o registo 3919)
+p0 RECUPERAÇÃO: 3919..3919 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3919
+p0 aplicado (estava retido): 3920;S03;18.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3921;S01;19.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3922;S04;24.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3923;S05;15.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3924;S06;22.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3925;S01;22.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3926;S06;23.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3927;S07;28.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3928;S08;25.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3929;S06;20.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3930;S04;18.8;2026-10-20T16:44:58
+p0 aplicado: 3931;S10;29.2;2026-10-20T16:44:58
+p0 aplicado: 3932;S01;24.2;2026-10-20T16:44:58
+p0 aplicado: 3933;S09;21.2;2026-10-20T16:44:58
+p0 DESCARTADO (simulação): 3934
+p0 EM ESPERA: 3935 (falta o registo 3934)
+p0 EM ESPERA: 3936 (falta o registo 3934)
+p0 EM ESPERA: 3937 (falta o registo 3934)
+p0 EM ESPERA: 3938 (falta o registo 3934)
+p0 EM ESPERA: 3939 (falta o registo 3934)
+p0 EM ESPERA: 3940 (falta o registo 3934)
+p0 EM ESPERA: 3941 (falta o registo 3934)
+p0 DESCARTADO (simulação): 3942
+p0 EM ESPERA: 3943 (falta o registo 3934)
+p0 DESCARTADO (simulação): 3944
+p0 EM ESPERA: 3945 (falta o registo 3934)
+p0 EM ESPERA: 3946 (falta o registo 3934)
+p0 DESCARTADO (simulação): 3947
+p0 EM ESPERA: 3948 (falta o registo 3934)
+p0 RECUPERAÇÃO: 3934..3934 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3934
+p0 aplicado (estava retido): 3935;S04;21.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3936;S07;26.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3937;S07;21.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3938;S03;16.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3939;S05;27.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3940;S09;27.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3941;S07;20.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3949 (falta o registo 3942)
+p0 EM ESPERA: 3950 (falta o registo 3942)
+p0 EM ESPERA: 3951 (falta o registo 3942)
+p0 DESCARTADO (simulação): 3952
+p0 EM ESPERA: 3953 (falta o registo 3942)
+p0 EM ESPERA: 3954 (falta o registo 3942)
+p0 EM ESPERA: 3955 (falta o registo 3942)
+p0 EM ESPERA: 3956 (falta o registo 3942)
+p0 RECUPERAÇÃO: 3942..3942 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3942
+p0 aplicado (estava retido): 3943;S06;15.7;2026-10-20T16:44:58
+p0 EM ESPERA: 3957 (falta o registo 3944)
+p0 RECUPERAÇÃO: 3944..3944 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3944
+p0 aplicado (estava retido): 3945;S03;23.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3946;S04;29.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3958 (falta o registo 3947)
+p0 DESCARTADO (simulação): 3959
+p0 EM ESPERA: 3960 (falta o registo 3947)
+p0 RECUPERAÇÃO: 3947..3947 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3947
+p0 aplicado (estava retido): 3948;S09;27.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3949;S08;25.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3950;S06;16.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3951;S06;15.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3961 (falta o registo 3952)
+p0 EM ESPERA: 3962 (falta o registo 3952)
+p0 DESCARTADO (simulação): 3963
+p0 DESCARTADO (simulação): 3964
+p0 EM ESPERA: 3965 (falta o registo 3952)
+p0 EM ESPERA: 3966 (falta o registo 3952)
+p0 RECUPERAÇÃO: 3952..3952 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3952
+p0 aplicado (estava retido): 3953;S05;25.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3954;S03;22.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3955;S08;18.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3956;S04;22.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3957;S05;28.0;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3958;S05;20.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3967 (falta o registo 3959)
+p0 DESCARTADO (simulação): 3968
+p0 EM ESPERA: 3969 (falta o registo 3959)
+p0 EM ESPERA: 3970 (falta o registo 3959)
+p0 EM ESPERA: 3971 (falta o registo 3959)
+p0 EM ESPERA: 3972 (falta o registo 3959)
+p0 EM ESPERA: 3973 (falta o registo 3959)
+p0 RECUPERAÇÃO: 3959..3959 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3959
+p0 aplicado (estava retido): 3960;S10;19.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3961;S03;15.9;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3962;S06;29.1;2026-10-20T16:44:58
+p0 EM ESPERA: 3974 (falta o registo 3963)
+p0 EM ESPERA: 3975 (falta o registo 3963)
+p0 EM ESPERA: 3976 (falta o registo 3963)
+p0 RECUPERAÇÃO: 3963..3964 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3963
+p0 RECUPERADO: 3964
+p0 aplicado (estava retido): 3965;S02;22.4;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3966;S08;28.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3967;S10;28.4;2026-10-20T16:44:58
+p0 EM ESPERA: 3977 (falta o registo 3968)
+p0 EM ESPERA: 3978 (falta o registo 3968)
+p0 DESCARTADO (simulação): 3979
+p0 EM ESPERA: 3980 (falta o registo 3968)
+p0 RECUPERAÇÃO: 3968..3968 pedida a 127.0.0.1:7000
+p0 RECUPERADO: 3968
+p0 aplicado (estava retido): 3969;S07;28.5;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3970;S09;16.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3971;S08;15.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3972;S09;15.7;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3973;S03;16.3;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3974;S03;17.1;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3975;S03;29.6;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3976;S04;29.2;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3977;S08;20.8;2026-10-20T16:44:58
+p0 aplicado (estava retido): 3978;S03;19.2;2026-10-20T16:44:58
+p0 EM ESPERA: 3981 (falta o registo 3979)
+p0 EM ESPERA: 3982 (falta o registo 3979)
+p0 EM ESPERA: 3983 (falta o registo 3979)
+p0 DESCARTADO (simulação): 3984
+p0 EM ESPERA: 3985 (falta o registo 3979)
+p0 EM ESPERA: 3986 (falta o registo 3979)
+p0 EM ESPERA: 3987 (falta o registo 3979)
+p0 EM ESPERA: 3988 (falta o registo 3979)

@@ -1,0 +1,32 @@
+**********************
+PowerShell transcript start
+Start time: 20261020163129
+Username: MARCO\marco
+RunAs User: MARCO\marco
+Configuration Name: 
+Machine: MARCO (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 8600
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\produtor.log
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> & "C:\Program Files\Java\jdk-25.0.2\bin\java.exe" `
+  -cp "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-produtor\out" `
+  rep02.Producer 1
+>
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> cd "C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final"
+
+& "C:\Program Files\Java\jdk-25.0.2\bin\java.exe" `
+  -cp "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-produtor\out" `
+  rep02.Producer 1 2>&1 |
+  Tee-Object -FilePath ".\produtor-real.log"

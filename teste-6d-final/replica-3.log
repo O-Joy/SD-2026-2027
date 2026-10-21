@@ -1,0 +1,55 @@
+**********************
+PowerShell transcript start
+Start time: 20261020163106
+Username: MARCO\marco
+RunAs User: MARCO\marco
+Configuration Name: 
+Machine: MARCO (Microsoft Windows NT 10.0.26300.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 20172
+PSVersion: 7.6.6
+PSEdition: Core
+GitCommitId: 7.6.6
+OS: Microsoft Windows 10.0.26300
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is .\replica-3.log
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> & "C:\Program Files\Java\jdk-25.0.2\bin\java.exe" `
+  "-Dperda=0.2" `
+  -cp "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-replica\out" `
+  rep02.PartitionReplica 3 0
+
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> cd "C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final"
+
+cmd /c ""C:\Program Files\Java\jdk-25.0.2\bin\java.exe" -Dperda=0.2 -cp "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-replica\out" rep02.PartitionReplica 3 0 > replica-3-real.log 2>&1"
+
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final>  cd "C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final"
+
+cmd /c ""C:\Program Files\Java\jdk-25.0.2\bin\java.exe" -Dperda=0.2 -cp "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-replica\out" rep02.PartitionReplica 3 0 > replica-3-real.log 2>&1"
+
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> $base = "C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final"
+$java = "C:\Program Files\Java\jdk-25.0.2\bin\java.exe"
+$cp = "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-replica\out"
+
+Start-Process `
+  -FilePath $java `
+  -ArgumentList @("-Dperda=0.2", "-cp", $cp, "rep02.PartitionReplica", "3", "0") `
+  -WorkingDirectory $base `
+  -RedirectStandardOutput "$base\replica-3-real.log" `
+  -RedirectStandardError "$base\replica-3-errors.log"
+PS C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final> $base = "C:\Users\marco\Desktop\SDt\SD-2026-2027\teste-6d-final"
+$java = "C:\Program Files\Java\jdk-25.0.2\bin\java.exe"
+$cp = "C:\Users\marco\Desktop\SDt\SD-2026-2027\Sprints\E1-COMINDIR02\rep02-replica\out"
+
+Start-Process `
+  -FilePath $java `
+  -ArgumentList @("-Dperda=0.2", "-cp", $cp, "rep02.PartitionReplica", "3", "0") `
+  -WorkingDirectory $base `
+  -RedirectStandardOutput "$base\replica-3-real.log" `
+  -RedirectStandardError "$base\replica-3-errors.log"
