@@ -1,3 +1,0 @@
-Comandos: <sensor> <temperatura> | rajada <n> <s> | rajada-quente <n> <s> | sair
-> Rajada de 1000 leituras: primeiro envio 1792511096523 ms, ·ltimo envio 1792511098645 ms (duraτπo 2122 ms)
-Leituras por partiτπo: p0=1000 | falhas ao publicar: 0
