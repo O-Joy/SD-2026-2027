@@ -9,6 +9,9 @@ import java.util.TreeMap;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 public class PartitionReplica {
 
@@ -19,50 +22,77 @@ public class PartitionReplica {
     private static final AtomicBoolean DESCARTE_FEITO = new AtomicBoolean(false);   // descarta-se uma só vez
     private static final Random ALEATORIO = new Random();                           // Random é thread-safe
 
+    public static PrintWriter logFile;
+    public static ScheduledExecutorService verificador;
+
     // estado de UMA partição (cada partição tem o seu, e é usado por uma só thread)
     static class Estado {
         final int k;
         final RecordFile file;
         long ultimo;                                          // último seq escrito no ficheiro
         final TreeMap<Long, SensorRecord> retidos = new TreeMap<>();
-        String hostLider;                                     // atualizados a cada REG recebido
+        String hostLider;                                     // atualizados a cada LOTE recebido
         int portoLider;
+        final HeartbeatMonitor monitor;
 
         Estado(int id, int k) throws IOException {
             this.k = k;
             this.file = new RecordFile("replica-" + id + "-p" + k + ".txt", N);
             this.ultimo = file.lastSeq();
+            
+            // Inicializa o detetor de falhas desta partição
+            this.monitor = new HeartbeatMonitor(k, Wire.PERIODO_HB_MS, Wire.FATOR_TIMEOUT, msg -> {
+                String logMsg = System.currentTimeMillis() + ";" + msg;
+                System.out.println(logMsg);
+                if (logFile != null) logFile.println(logMsg);
+            });
         }
 
         // chamado pela thread de subscrição por cada mensagem do tópico de dados
-        void onReg(String msg) {
+        void onLote(String msg) {
             try {
-                if (!Wire.type(msg).equals("REG")) {
-                    System.out.println("p" + k + " REJEITADO: " + msg);
+                if (!Wire.type(msg).equals("LOTE")) {
+                    System.out.println("p" + k + " REJEITADO (Não é LOTE): " + msg.split("\n")[0]);
                     return;
                 }
-                String[] partes = Wire.regParts(msg);          // { endereço, porto, linha do registo }
-                SensorRecord r = SensorRecord.fromLine(partes[2], N);
-                int porto = Integer.parseInt(partes[1]);
+                
+                Batch lote = Batch.decode(msg, N);
+                
+                // 1. Avisa o monitor que chegou sinal de vida
+                monitor.onHeartbeat(lote.getInc(), lote.getHb());
 
-                // simulação de perda (antes de aplicar e antes de aprender o endereço do líder)
-                if (DESCARTAR == r.getSeq() && DESCARTE_FEITO.compareAndSet(false, true)) {
-                    System.out.println("p" + k + " DESCARTADO (simulação): " + r.getSeq());
-                    return;
-                }
-                if (PERDA > 0 && ALEATORIO.nextDouble() < PERDA) {
-                    System.out.println("p" + k + " DESCARTADO (simulação): " + r.getSeq());
-                    return;
+                // 2. Assinala a receção
+                String logRecebido = System.currentTimeMillis() + ";RECEBIDO;p" + k + 
+                                     ";inc=" + lote.getInc() + ";hb=" + lote.getHb() + 
+                                     ";ultimoSeq=" + lote.getLastSeq() + ";n=" + lote.getRecords().size() + 
+                                     ";intervalo=" + lote.seqRange();
+                System.out.println(logRecebido);
+                if (logFile != null) logFile.println(logRecebido);
+
+                hostLider = lote.getAddress();
+                portoLider = lote.getPort();
+
+                // 3. Aplica os registos do lote
+                for (SensorRecord r : lote.getRecords()) {
+                    // simulação de perda (antes de aplicar)
+                    if (DESCARTAR == r.getSeq() && DESCARTE_FEITO.compareAndSet(false, true)) {
+                        System.out.println("p" + k + " DESCARTADO (simulação): " + r.getSeq());
+                        continue;
+                    }
+                    if (PERDA > 0 && ALEATORIO.nextDouble() < PERDA) {
+                        System.out.println("p" + k + " DESCARTADO (simulação): " + r.getSeq());
+                        continue;
+                    }
+                    aplicar(r, false);
                 }
 
-                hostLider = partes[0];
-                portoLider = porto;
-                aplicar(r, false);
-                if (retidos.size() > Wire.LIMITE_RETIDOS) {
-                    recuperar();
+                // 4. Recuperação: verifica se, no fim de aplicar, falta algo até ao ultimoSeq do líder
+                if (ultimo < lote.getLastSeq()) {
+                    recuperar(lote.getLastSeq());
                 }
-            } catch (IllegalArgumentException e) {            // inclui NumberFormatException
-                System.out.println("p" + k + " REJEITADO: " + msg);
+
+            } catch (IllegalArgumentException e) {
+                System.out.println("p" + k + " REJEITADO: LOTE mal formado");
             } catch (IOException e) {
                 System.out.println("p" + k + " Falha ao escrever: " + e.getMessage());
             }
@@ -85,7 +115,6 @@ public class PartitionReplica {
             }
         }
 
-        // escreve os retidos que passaram a estar em sequência
         void escreverEmSequencia() throws IOException {
             while (!retidos.isEmpty() && retidos.firstKey() == ultimo + 1) {
                 SensorRecord r = retidos.pollFirstEntry().getValue();
@@ -95,12 +124,19 @@ public class PartitionReplica {
             }
         }
 
-        // pede ao líder o intervalo [ultimo+1, menor retido - 1] por TCP
-        void recuperar() {
+        // pede ao líder o intervalo [ultimo+1, alvo] por TCP
+        void recuperar(long ultimoSeqLider) {
             long de = ultimo + 1;
-            long ate = retidos.firstKey() - 1;
-            System.out.println("p" + k + " RECUPERAÇÃO: " + de + ".." + ate
-                    + " pedida a " + hostLider + ":" + portoLider);
+            // Pede até ao primeiro retido - 1, ou até ao ultimoSeq se não tiver retidos
+            long ate = retidos.isEmpty() ? ultimoSeqLider : Math.min(ultimoSeqLider, retidos.firstKey() - 1);
+            
+            if (de > ate) return; // Nada a recuperar neste intervalo
+
+            String logRec = System.currentTimeMillis() + ";RECUPERACAO;p" + k + ";de=" + de + ";ate=" + ate;
+            System.out.println(logRec);
+            if (logFile != null) logFile.println(logRec);
+
+            System.out.println("p" + k + " RECUPERAÇÃO TCP (" + de + ".." + ate + ") pedida a " + hostLider + ":" + portoLider);
             try (Socket s = new Socket()) {
                 s.connect(new InetSocketAddress(hostLider, portoLider), Wire.T_TCP_MS);
                 s.setSoTimeout(Wire.T_TCP_MS);
@@ -122,11 +158,8 @@ public class PartitionReplica {
                     }
                     aplicar(SensorRecord.fromLine(linha, N), true);
                 }
-                // readLine() devolveu null: o líder fechou a ligação sem enviar FIM
                 System.out.println("p" + k + " RECUPERAÇÃO FALHOU: ligação fechada antes de FIM");
             } catch (IOException | IllegalArgumentException e) {
-                // ligação recusada, tempo esgotado, interrupção ou linha inválida:
-                // mantêm-se o ficheiro e os retidos; tenta-se de novo no próximo REG
                 System.out.println("p" + k + " RECUPERAÇÃO FALHOU: " + e);
             }
         }
@@ -141,15 +174,20 @@ public class PartitionReplica {
         String api = "http://127.0.0.1:" + (args.length > 2 ? args[2] : "5001") + "/api/v0";
         IpfsPubSub ps = new IpfsPubSub(api);
 
+        logFile = new PrintWriter(new FileWriter("monitor-replica" + id + ".txt", true), true);
+        
         List<Thread> threads = new ArrayList<>();
+        List<Estado> estadosAtivos = new ArrayList<>();
+
         for (String s : args[1].split(",")) {
             final int k = Integer.parseInt(s.trim());
-            final Estado estado = new Estado(id, k);              // um estado (e um ficheiro) por partição
-            System.out.println("Réplica " + id + ": p" + k + " (último seq: " + estado.ultimo
-                    + "), subscreve " + Wire.topicData(k));
-            Thread t = new Thread(() -> {                         // uma thread por partição
+            final Estado estado = new Estado(id, k);
+            estadosAtivos.add(estado);
+            
+            System.out.println("Réplica " + id + ": p" + k + " (último seq: " + estado.ultimo + "), subscreve " + Wire.topicData(k));
+            Thread t = new Thread(() -> { 
                 try {
-                    ps.subscribe(Wire.topicData(k), estado::onReg);
+                    ps.subscribe(Wire.topicData(k), estado::onLote);
                 } catch (IOException | InterruptedException e) {
                     System.out.println("p" + k + " Subscrição terminada: " + e.getMessage());
                 }
@@ -157,7 +195,16 @@ public class PartitionReplica {
             t.start();
             threads.add(t);
         }
-        for (Thread t : threads) {                                // a thread principal aguarda
+
+        // Inicia a thread de verificação dos monitores a cada VERIFICACAO_MS
+        verificador = Executors.newSingleThreadScheduledExecutor();
+        verificador.scheduleAtFixedRate(() -> {
+            for (Estado e : estadosAtivos) {
+                e.monitor.check();
+            }
+        }, Wire.VERIFICACAO_MS, Wire.VERIFICACAO_MS, TimeUnit.MILLISECONDS);
+
+        for (Thread t : threads) {
             t.join();
         }
     }
