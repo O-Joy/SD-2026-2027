@@ -52,4 +52,37 @@ public class RecordFile {
         }
         return out;
     }
+
+    // COMINDIR05: todos os registos do ficheiro, pela ordem do seq
+    public synchronized List<SensorRecord> all() throws IOException {
+        return range(1, Long.MAX_VALUE);
+    }
+
+    // COMINDIR05: último registo do ficheiro, ou null se estiver vazio
+    public synchronized SensorRecord last() throws IOException {
+        List<SensorRecord> todos = all();
+        return todos.isEmpty() ? null : todos.get(todos.size() - 1);
+    }
+
+    // COMINDIR05: registo com este seq, ou null se não existir
+    public synchronized SensorRecord get(long seq) throws IOException {
+        List<SensorRecord> r = range(seq, seq);
+        return r.isEmpty() ? null : r.get(0);
+    }
+
+    // COMINDIR05: reescreve o ficheiro de forma ATÓMICA só com os registos de seq < from
+    // (ficheiro temporário + ATOMIC_MOVE, como o estado do RaftState). Devolve os descartados.
+    public synchronized List<SensorRecord> truncateFrom(long from) throws IOException {
+        List<SensorRecord> manter = new ArrayList<>();
+        List<SensorRecord> descartados = new ArrayList<>();
+        for (SensorRecord r : all()) {
+            if (r.getSeq() < from) manter.add(r); else descartados.add(r);
+        }
+        StringBuilder sb = new StringBuilder();
+        for (SensorRecord r : manter) sb.append(r.toLine()).append(System.lineSeparator());
+        Path tmp = path.resolveSibling(path.getFileName() + ".tmp");
+        Files.writeString(tmp, sb.toString(), StandardCharsets.UTF_8);
+        Files.move(tmp, path, StandardCopyOption.REPLACE_EXISTING, StandardCopyOption.ATOMIC_MOVE);
+        return descartados;
+    }
 }
