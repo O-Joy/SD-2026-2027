@@ -47,6 +47,7 @@ public class PartitionNode {
     private final RecordFile file;                 // no-p<k>-n<i>.txt
     private final PrintWriter eventos;             // eventos-p<k>-n<i>.txt
     private final PrintWriter hbLog;               // hb-p<k>-n<i>.txt
+    private final PrintWriter truncLog;            // truncados-p<k>-n<i>.txt (C: registos descartados, para o RaftCheck)
     private final RaftState raft;                  // estado-p<k>-n<i>.txt
     private final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(2);
 
@@ -70,6 +71,7 @@ public class PartitionNode {
         this.file = new RecordFile("no-p" + k + "-n" + i + ".txt", n);
         this.eventos = new PrintWriter(new FileWriter("eventos-p" + k + "-n" + i + ".txt", true), true);
         this.hbLog = new PrintWriter(new FileWriter("hb-p" + k + "-n" + i + ".txt", true), true);
+        this.truncLog = new PrintWriter(new FileWriter("truncados-p" + k + "-n" + i + ".txt", true), true);
         carregarUltimoRegisto();
         // arranca SEMPRE como seguidor, com o termo e o voto gravados em estado-p<k>-n<i>.txt
         this.raft = new RaftState(k, i, Wire.GRUPO, Wire.ELEICAO_MIN_MS, Wire.ELEICAO_MAX_MS,
@@ -138,7 +140,8 @@ public class PartitionNode {
 
     private void verificar() {
         try {
-            if (Wire.isolated(k, i)) return;           // isolado: não é candidato nem publica
+            // isolado: o prazo continua a expirar e o nó continua a candidatar-se (o termo sobe),
+            // mas o PEDIDO_VOTO não sai (publicar() devolve false quando o nó está isolado)
             long t, s, tr;
             synchronized (this) {                      // nó -> raft
                 t = raft.tick();                       // grava termo e voto ANTES de publicar
@@ -197,8 +200,6 @@ public class PartitionNode {
             // 1.º LOTE de imediato: afirma a liderança perante os outros nós
             loteTask = scheduler.scheduleAtFixedRate(this::enviarLote,
                     0, Wire.PERIODO_HB_MS, TimeUnit.MILLISECONDS);
-            log("INICIO_LIDER;p" + k + ";termo=" + raft.term() + ";seq=" + seq
-                    + ";L=" + lamport + ";V=" + vector);
         } catch (IOException e) {
             log("ERRO;p" + k + ";passagem a líder: " + e.getMessage());
         }
@@ -420,7 +421,11 @@ public class PartitionNode {
         if (corte != -1) {
             List<SensorRecord> descartados = file.truncateFrom(corte);
             TreeSet<Long> termos = new TreeSet<>();
-            for (SensorRecord r : descartados) termos.add(r.getTerm());
+            long agora = System.currentTimeMillis();
+            for (SensorRecord r : descartados) {
+                termos.add(r.getTerm());
+                truncLog.println(agora + ";" + r.toLine());        // instante;seq;termo;sensor;temp;instante;L;V
+            }
             carregarUltimoRegisto();                               // ultimoSeq = corte - 1
             log("TRUNCADO;p" + k + ";de=" + corte + ";descartados=" + descartados.size()
                     + ";termos=" + termos);
