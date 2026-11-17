@@ -2,10 +2,13 @@ package tpf;
 
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
+import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.interactions.commands.OptionType;
 import net.dv8tion.jda.api.interactions.commands.build.Commands;
+import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.interactions.commands.build.SubcommandData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
@@ -28,25 +31,40 @@ public class LeaderBot extends ListenerAdapter {
             jda.awaitReady();
             System.out.println("O LeaderBot acordou e está online!");
 
-            // 3. Registar os comandos na API do Discord
-            jda.updateCommands().addCommands(
+            // 3. Registar os comandos no servidor de testes (comandos de guild: aparecem logo)
+            if (jda.getGuilds().isEmpty()) {
+                System.err.println("Erro: o bot não está em nenhum servidor. Convida-o primeiro.");
+                return;
+            }
+            Guild guild = jda.getGuilds().get(0);
+
+            // Apaga os comandos globais antigos (versão anterior), para não aparecerem repetidos
+            jda.updateCommands().queue();
+
+            guild.updateCommands().addCommands(
                     Commands.slash("estado", "Mostra o estado do sistema (Público)"),
                     Commands.slash("config", "Configura o sistema (Apenas Admins)")
                             .addSubcommands(new SubcommandData("r", "Altera o fator de replicação R")
-                                    .addOption(OptionType.INTEGER, "n", "novo valor de R", true)),
+                                    .addOptions(new OptionData(OptionType.INTEGER, "n", "novo valor de R", true)
+                                            .setMinValue(1))),
                     Commands.slash("registar", "Regista um texto no arquivo")
-                            .addOption(OptionType.STRING, "texto", "texto a registar", true),
+                            .addOptions(new OptionData(OptionType.STRING, "texto", "texto a registar", true)
+                                    .setMaxLength(1500)),
                     Commands.slash("recuperar", "Recupera os registos de um intervalo de LSN")
-                            .addOption(OptionType.INTEGER, "de", "primeiro LSN", true)
-                            .addOption(OptionType.INTEGER, "ate", "último LSN", true),
+                            .addOptions(
+                                    new OptionData(OptionType.INTEGER, "de", "primeiro LSN", true).setMinValue(0),
+                                    new OptionData(OptionType.INTEGER, "ate", "último LSN", true).setMinValue(0)),
                     Commands.slash("replica-token", "Gera um token de registo de réplica (Apenas Admins)"),
                     Commands.slash("replica-remover", "Remove uma réplica (Apenas Admins)")
                             .addOption(OptionType.STRING, "id", "identificador da réplica", true),
                     Commands.slash("rajada", "Injeta registos sintéticos (Apenas Admins)")
-                            .addOption(OptionType.INTEGER, "n", "número de registos", true)
-                            .addOption(OptionType.INTEGER, "intervalo", "intervalo entre registos, em ms", true)
-            ).queue();
-            System.out.println("Comandos registados com sucesso!");
+                            .addOptions(
+                                    new OptionData(OptionType.INTEGER, "n", "número de registos", true).setMinValue(1),
+                                    new OptionData(OptionType.INTEGER, "intervalo_ms", "intervalo entre registos, em ms", true).setMinValue(0))
+            ).queue(
+                    ok -> System.out.println("Comandos registados no servidor " + guild.getName() + "!"),
+                    erro -> System.err.println("Erro ao registar comandos: " + erro.getMessage())
+            );
 
         } catch (Exception e) {
             System.err.println("Erro ao iniciar o bot: " + e.getMessage());
@@ -114,10 +132,21 @@ public class LeaderBot extends ListenerAdapter {
         else if (event.getName().equals("rajada")) {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
-            int intervalo = event.getOption("intervalo").getAsInt();
+            int intervalo = event.getOption("intervalo_ms").getAsInt();
             event.reply("Comando recebido: Rajada de " + n + " registos com intervalo de " + intervalo
                     + " ms (Ainda não implementado)").queue();
         }
+    }
+
+    // 5. Esta função "dispara" sempre que é escrita uma mensagem num canal que o bot vê
+    @Override
+    public void onMessageReceived(MessageReceivedEvent event) {
+        if (event.getAuthor().isBot()) return;                       // ignora bots (incluindo ele próprio)
+        if (!event.isFromGuild()) return;                            // ignora mensagens privadas
+        if (!event.getChannel().getName().equals("arquivo")) return; // ignora outros canais
+
+        System.out.println("[#arquivo] " + event.getAuthor().getName() + ": "
+                + event.getMessage().getContentRaw());
     }
 
     // Verifica se quem chamou o comando tem o cargo "admin-arquivo"; se não tiver, responde com o erro
@@ -125,7 +154,8 @@ public class LeaderBot extends ListenerAdapter {
         boolean isAdmin = event.getMember().getRoles().stream()
                 .anyMatch(role -> role.getName().equals("admin-arquivo"));
         if (!isAdmin) {
-            event.reply("Erro: Não tens permissão (admin-arquivo) para usar este comando.").queue();
+            event.reply("Erro: Não tens permissão (admin-arquivo) para usar este comando.")
+                    .setEphemeral(true).queue();
         }
         return isAdmin;
     }
