@@ -2,5 +2,6 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "Sprints/E2-tpf-lider/lib/JDA-6.7.0-withDependencies.jar"
-    ]
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
 }

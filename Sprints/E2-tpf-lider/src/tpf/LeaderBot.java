@@ -145,8 +145,8 @@ public class LeaderBot extends ListenerAdapter {
         if (!event.isFromGuild()) return;                            // ignora mensagens privadas
         if (!event.getChannel().getName().equals("arquivo")) return; // ignora outros canais
 
-        System.out.println("[#arquivo] " + event.getAuthor().getName() + ": "
-                + event.getMessage().getContentRaw());
+        event.getChannel().sendMessage("Mensagem recebida: \"" 
+            + event.getMessage().getContentRaw() + "\" (Ainda não implementado)").queue();
     }
 
     // Verifica se quem chamou o comando tem o cargo "admin-arquivo"; se não tiver, responde com o erro
