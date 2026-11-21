@@ -12,33 +12,54 @@ import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.interactions.commands.build.SubcommandData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-// 1. A nossa classe agora "estende" (herda) o ListenerAdapter para poder ouvir eventos
 public class LeaderBot extends ListenerAdapter {
+
+    private static final Path PASTA_LIDER = Path.of("Sprints/E2-tpf-lider");
+
+    private final byte[] masterKey;
+    private final RegistoLog registoLog;
+
+    public LeaderBot(byte[] masterKey, RegistoLog registoLog) {
+        this.masterKey = masterKey;
+        this.registoLog = registoLog;
+    }
 
     public static void main(String[] args) {
         try {
-            String token = Files.readString(Path.of("Sprints/E2-tpf-lider/token.txt")).trim();
+            // 1. Carregar ou gerar master.key ANTES de ligar ao Discord.
+            // Se existir e não tiver 32 bytes, lança exceção e recusa arrancar.
+            byte[] masterKey = MasterKey.carregarOuGerar(PASTA_LIDER.resolve("master.key"));
+            System.out.println("master.key carregada com sucesso (" + masterKey.length + " bytes).");
+
+            // 2. Inicializar o registo durável (lê o último LSN de registos.log)
+            RegistoLog registoLog = new RegistoLog(
+                    PASTA_LIDER.resolve("registos.log"),
+                    PASTA_LIDER.resolve("eventos-lider.txt")
+            );
+            System.out.println("RegistoLog pronto. Último LSN recuperado: " + registoLog.getUltimoLsn());
+
+            String token = Files.readString(PASTA_LIDER.resolve("token.txt")).trim();
+
+            LeaderBot bot = new LeaderBot(masterKey, registoLog);
 
             JDA jda = JDABuilder.createDefault(token)
                     .enableIntents(GatewayIntent.MESSAGE_CONTENT)
-                    // 2. Dizemos ao bot que os eventos vão ser tratados por esta própria classe
-                    .addEventListeners(new LeaderBot())
+                    .addEventListeners(bot)
                     .build();
 
             jda.awaitReady();
             System.out.println("O LeaderBot acordou e está online!");
 
-            // 3. Registar os comandos no servidor de testes (comandos de guild: aparecem logo)
             if (jda.getGuilds().isEmpty()) {
                 System.err.println("Erro: o bot não está em nenhum servidor. Convida-o primeiro.");
                 return;
             }
             Guild guild = jda.getGuilds().get(0);
 
-            // Apaga os comandos globais antigos (versão anterior), para não aparecerem repetidos
             jda.updateCommands().queue();
 
             guild.updateCommands().addCommands(
@@ -67,40 +88,60 @@ public class LeaderBot extends ListenerAdapter {
             );
 
         } catch (Exception e) {
-            System.err.println("Erro ao iniciar o bot: " + e.getMessage());
+            System.err.println("Erro fatal ao iniciar o bot: " + e.getMessage());
             e.printStackTrace();
+            System.exit(1);
         }
     }
 
-    // 4. Esta função "dispara" automaticamente sempre que alguém usa um comando no Discord
+    /**
+     * Ponto único de entrada para registos (/registar, #arquivo e futuramente /rajada da Pessoa D).
+     */
+    public Registo registar(String autor, String canal, String texto) throws IOException {
+        return registoLog.registar(autor, canal, texto);
+    }
+
+    public byte[] getMasterKey() {
+        return masterKey;
+    }
+
+    public RegistoLog getRegistoLog() {
+        return registoLog;
+    }
+
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 
-        // Verifica se o comando foi usado no canal #arquivo
         if (!event.getChannel().getName().equals("arquivo")) {
             event.reply("Os comandos só funcionam no canal #arquivo!").setEphemeral(true).queue();
             return;
         }
 
-        // Lógica do comando /estado
         if (event.getName().equals("estado")) {
             event.reply("Comando recebido: Mostrar estado (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /config r <n> (Com proteção de Cargo/Role)
         else if (event.getName().equals("config")) {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
             event.reply("Comando recebido: Fator de replicação R = " + n + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /registar <texto>
+        // /registar <texto> — grava com fsync ANTES de responder
         else if (event.getName().equals("registar")) {
             String texto = event.getOption("texto").getAsString();
-            event.reply("Comando recebido: Registar \"" + texto + "\" (Ainda não implementado)").queue();
+            String autor = event.getUser().getName();
+            String canal = event.getChannel().getName();
+
+            try {
+                Registo r = registar(autor, canal, texto);
+                event.reply("Registado com LSN " + r.lsn()).queue();
+            } catch (IOException e) {
+                System.err.println("Erro ao gravar registo: " + e.getMessage());
+                event.reply("Erro interno ao gravar o registo em disco.").setEphemeral(true).queue();
+            }
         }
 
-        // Lógica do comando /recuperar <de> <ate>
         else if (event.getName().equals("recuperar")) {
             long de = event.getOption("de").getAsLong();
             long ate = event.getOption("ate").getAsLong();
@@ -113,22 +154,18 @@ public class LeaderBot extends ListenerAdapter {
                     + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /replica-token (Com proteção de Cargo/Role)
         else if (event.getName().equals("replica-token")) {
             if (!temAdmin(event)) return;
-            // ephemeral: o token só deve ser visto por quem o pediu
             event.reply("Comando recebido: Gerar token de réplica (Ainda não implementado)")
                     .setEphemeral(true).queue();
         }
 
-        // Lógica do comando /replica-remover <id> (Com proteção de Cargo/Role)
         else if (event.getName().equals("replica-remover")) {
             if (!temAdmin(event)) return;
             String id = event.getOption("id").getAsString();
             event.reply("Comando recebido: Remover a réplica " + id + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /rajada <n> <intervalo> (Com proteção de Cargo/Role)
         else if (event.getName().equals("rajada")) {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
@@ -138,18 +175,24 @@ public class LeaderBot extends ListenerAdapter {
         }
     }
 
-    // 5. Esta função "dispara" sempre que é escrita uma mensagem num canal que o bot vê
     @Override
     public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getAuthor().isBot()) return;                       // ignora bots (incluindo ele próprio)
-        if (!event.isFromGuild()) return;                            // ignora mensagens privadas
-        if (!event.getChannel().getName().equals("arquivo")) return; // ignora outros canais
+        if (event.getAuthor().isBot()) return;
+        if (!event.isFromGuild()) return;
+        if (!event.getChannel().getName().equals("arquivo")) return;
 
-        event.getChannel().sendMessage("Mensagem recebida: \"" 
-            + event.getMessage().getContentRaw() + "\" (Ainda não implementado)").queue();
+        String autor = event.getAuthor().getName();
+        String canal = event.getChannel().getName();
+        String texto = event.getMessage().getContentRaw();
+
+        try {
+            Registo r = registar(autor, canal, texto);
+            event.getMessage().reply("Registado com LSN " + r.lsn()).queue();
+        } catch (IOException e) {
+            System.err.println("Erro ao gravar mensagem de #arquivo: " + e.getMessage());
+        }
     }
 
-    // Verifica se quem chamou o comando tem o cargo "admin-arquivo"; se não tiver, responde com o erro
     private boolean temAdmin(SlashCommandInteractionEvent event) {
         boolean isAdmin = event.getMember().getRoles().stream()
                 .anyMatch(role -> role.getName().equals("admin-arquivo"));
