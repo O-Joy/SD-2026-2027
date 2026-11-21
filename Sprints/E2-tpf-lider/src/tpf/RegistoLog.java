@@ -42,12 +42,7 @@ public class RegistoLog {
         escreverComFsync(linha);
         registarEvento(instante, "REGISTO", "lsn=" + lsn + " autor=" + autor + " canal=" + canal);
 
-        Registo registo = new Registo(lsn, instante, autor, canal, texto);
-
-        // TODO (Pessoa B): enviar 'registo' para o chunk aberto
-        // chunkAtual.adicionar(registo);
-
-        return registo;
+        return new Registo(lsn, instante, autor, canal, texto);
     }
 
     private void escreverComFsync(String linha) throws IOException {

@@ -15,6 +15,10 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 public class LeaderBot extends ListenerAdapter {
 
@@ -22,6 +26,11 @@ public class LeaderBot extends ListenerAdapter {
 
     private final byte[] masterKey;
     private final RegistoLog registoLog;
+
+    // chunk aberto e selagem
+    private Chunk chunkAberto = new Chunk();
+    private final ScheduledExecutorService selador = Executors.newSingleThreadScheduledExecutor();
+    private ScheduledFuture<?> selagemAgendada;          // selagem por tempo do chunk aberto
 
     public LeaderBot(byte[] masterKey, RegistoLog registoLog) {
         this.masterKey = masterKey;
@@ -97,8 +106,47 @@ public class LeaderBot extends ListenerAdapter {
     /**
      * Ponto único de entrada para registos (/registar, #arquivo e futuramente /rajada da Pessoa D).
      */
-    public Registo registar(String autor, String canal, String texto) throws IOException {
-        return registoLog.registar(autor, canal, texto);
+    public synchronized Registo registar(String autor, String canal, String texto) throws IOException {
+        Registo r = registoLog.registar(autor, canal, texto);     // LSN + registos.log + fsync + REGISTO
+
+        boolean primeiro = chunkAberto.vazio();
+        chunkAberto.adicionar(r);
+        if (chunkAberto.tamanho() >= Wire.CHUNK_MAX_BYTES) {
+            selar();                                               // por tamanho: sela de imediato
+        } else if (primeiro) {
+            Chunk este = chunkAberto;                              // por tempo: SELAGEM_MS após o 1.º registo
+            selagemAgendada = selador.schedule(() -> selarPorTempo(este),
+                    Wire.SELAGEM_MS, TimeUnit.MILLISECONDS);
+        }
+        return r;
+    }
+
+    // corre na thread do selador, SELAGEM_MS depois do 1.º registo do chunk 'alvo'
+    private synchronized void selarPorTempo(Chunk alvo) {
+        try {
+            if (chunkAberto != alvo) return;                       // já foi selado por tamanho
+            selar();
+        } catch (RuntimeException e) {
+            System.err.println("Erro na selagem por tempo: " + e.getMessage());
+        }
+    }
+
+    // fecha o chunk aberto; o registo seguinte abre um chunk novo
+    private synchronized void selar() {
+        if (chunkAberto.vazio()) return;
+        if (selagemAgendada != null) {
+            selagemAgendada.cancel(false);
+            selagemAgendada = null;
+        }
+        Chunk chunk = chunkAberto;
+        chunkAberto = new Chunk();                                 // depois de selado, o chunk não muda
+
+        byte[] dados = chunk.serializar(Wire.PAD_BYTES);
+        System.out.println("Chunk selado: LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
+                + ", " + chunk.getRegistos().size() + " registos, " + dados.length + " bytes");
+
+        // Pessoa C: cifrar 'dados' com ChunkCrypto, gravar selados/<chunkId>.bin e .hdr
+        //           e registar o evento SELADO (chunkId, chunk.lsnDe(), chunk.lsnAte(), dados.length)
     }
 
     public byte[] getMasterKey() {
