@@ -20,9 +20,13 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
+import java.security.GeneralSecurityException;
+import java.time.Instant;
+
 public class LeaderBot extends ListenerAdapter {
 
     private static final Path PASTA_LIDER = Path.of("Sprints/E2-tpf-lider");
+    private static final Path PASTA_SELADOS = PASTA_LIDER.resolve("selados");
 
     private final byte[] masterKey;
     private final RegistoLog registoLog;
@@ -142,11 +146,22 @@ public class LeaderBot extends ListenerAdapter {
         chunkAberto = new Chunk();                                 // depois de selado, o chunk não muda
 
         byte[] dados = chunk.serializar(Wire.PAD_BYTES);
-        System.out.println("Chunk selado: LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
-                + ", " + chunk.getRegistos().size() + " registos, " + dados.length + " bytes");
 
-        // Pessoa C: cifrar 'dados' com ChunkCrypto, gravar selados/<chunkId>.bin e .hdr
-        //           e registar o evento SELADO (chunkId, chunk.lsnDe(), chunk.lsnAte(), dados.length)
+        // cifrar, gravar selados/<chunkId>.bin e .hdr e só depois registar o evento SELADO.
+        // Os registos já estão em registos.log (com fsync); se isto falhar, não se perdem.
+        try {
+            Sealed s = ChunkCrypto.seal(masterKey, dados);
+            s.gravar(PASTA_SELADOS);
+            registoLog.registarEvento(Instant.now().toString(), "SELADO",
+                    "chunkId=" + s.chunkId() + " lsn=" + chunk.lsnDe() + "-" + chunk.lsnAte()
+                            + " registos=" + chunk.getRegistos().size()
+                            + " bytes=" + dados.length + " cifrado=" + s.ciphertext().length);
+            System.out.println("Chunk selado: " + s.chunkId() + " LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
+                    + ", " + chunk.getRegistos().size() + " registos, " + dados.length + " bytes");
+        } catch (IOException | GeneralSecurityException e) {
+            System.err.println("Erro ao selar o chunk LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
+                    + ": " + e.getMessage());
+        }
     }
 
     public byte[] getMasterKey() {
