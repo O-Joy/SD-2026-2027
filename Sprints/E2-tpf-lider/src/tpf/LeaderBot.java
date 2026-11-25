@@ -3,6 +3,7 @@ package tpf;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -108,7 +109,7 @@ public class LeaderBot extends ListenerAdapter {
     }
 
     /**
-     * Ponto único de entrada para registos (/registar, #arquivo e futuramente /rajada da Pessoa D).
+     * Ponto único de entrada para registos (/registar, #arquivo e /rajada).
      */
     public synchronized Registo registar(String autor, String canal, String texto) throws IOException {
         Registo r = registoLog.registar(autor, canal, texto);     // LSN + registos.log + fsync + REGISTO
@@ -233,9 +234,43 @@ public class LeaderBot extends ListenerAdapter {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
             int intervalo = event.getOption("intervalo_ms").getAsInt();
-            event.reply("Comando recebido: Rajada de " + n + " registos com intervalo de " + intervalo
-                    + " ms (Ainda não implementado)").queue();
+            String autor = event.getUser().getName();
+            MessageChannel canal = event.getChannel();
+
+            // responder já: o Discord só espera 3 s pela resposta a um slash command
+            event.reply("Rajada de " + n + " registos com intervalo de " + intervalo + " ms iniciada.").queue();
+
+            // a rajada corre numa thread própria, para não bloquear a thread de eventos do JDA
+            // (nem o 'selador', que tem de continuar livre para a selagem por tempo)
+            new Thread(() -> executarRajada(autor, canal, n, intervalo), "rajada").start();
         }
+    }
+
+    // /rajada: injeta n registos sintéticos pelo MESMO método do /registar e do #arquivo
+    private void executarRajada(String autor, MessageChannel canal, int n, int intervaloMs) {
+        long primeiro = -1, ultimo = -1;
+        try {
+            for (int i = 1; i <= n; i++) {
+                Registo r = registar(autor, canal.getName(), textoSintetico(i, n));
+                if (primeiro < 0) primeiro = r.lsn();
+                ultimo = r.lsn();
+                if (intervaloMs > 0 && i < n) Thread.sleep(intervaloMs);
+            }
+            canal.sendMessage("Rajada concluída: " + n + " registos, LSN " + primeiro + "-" + ultimo + ".").queue();
+        } catch (IOException e) {
+            System.err.println("Erro na rajada: " + e.getMessage());
+            canal.sendMessage("Rajada interrompida por erro de disco depois do LSN " + ultimo + ".").queue();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
+
+    // "rajada i/n " seguido de carateres até RAJADA_TEXTO_BYTES
+    static String textoSintetico(int i, int n) {
+        String prefixo = "rajada " + i + "/" + n + " ";
+        StringBuilder sb = new StringBuilder(prefixo);
+        while (sb.length() < Wire.RAJADA_TEXTO_BYTES) sb.append((char) ('a' + sb.length() % 26));
+        return sb.toString();
     }
 
     @Override
