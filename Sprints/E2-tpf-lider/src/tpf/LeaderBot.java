@@ -3,6 +3,7 @@ package tpf;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Guild;
+import net.dv8tion.jda.api.entities.channel.middleman.MessageChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -12,33 +13,67 @@ import net.dv8tion.jda.api.interactions.commands.build.OptionData;
 import net.dv8tion.jda.api.interactions.commands.build.SubcommandData;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
-// 1. A nossa classe agora "estende" (herda) o ListenerAdapter para poder ouvir eventos
+import java.security.GeneralSecurityException;
+import java.time.Instant;
+
 public class LeaderBot extends ListenerAdapter {
+
+    private static final Path PASTA_LIDER = Path.of("Sprints/E2-tpf-lider");
+    private static final Path PASTA_SELADOS = PASTA_LIDER.resolve("selados");
+
+    private final byte[] masterKey;
+    private final RegistoLog registoLog;
+
+    // chunk aberto e selagem
+    private Chunk chunkAberto = new Chunk();
+    private final ScheduledExecutorService selador = Executors.newSingleThreadScheduledExecutor();
+    private ScheduledFuture<?> selagemAgendada;          // selagem por tempo do chunk aberto
+
+    public LeaderBot(byte[] masterKey, RegistoLog registoLog) {
+        this.masterKey = masterKey;
+        this.registoLog = registoLog;
+    }
 
     public static void main(String[] args) {
         try {
-            String token = Files.readString(Path.of("Sprints/E2-tpf-lider/token.txt")).trim();
+            // 1. Carregar ou gerar master.key ANTES de ligar ao Discord.
+            // Se existir e não tiver 32 bytes, lança exceção e recusa arrancar.
+            byte[] masterKey = MasterKey.carregarOuGerar(PASTA_LIDER.resolve("master.key"));
+            System.out.println("master.key carregada com sucesso (" + masterKey.length + " bytes).");
+
+            // 2. Inicializar o registo durável (lê o último LSN de registos.log)
+            RegistoLog registoLog = new RegistoLog(
+                    PASTA_LIDER.resolve("registos.log"),
+                    PASTA_LIDER.resolve("eventos-lider.txt")
+            );
+            System.out.println("RegistoLog pronto. Último LSN recuperado: " + registoLog.getUltimoLsn());
+
+            String token = Files.readString(PASTA_LIDER.resolve("token.txt")).trim();
+
+            LeaderBot bot = new LeaderBot(masterKey, registoLog);
 
             JDA jda = JDABuilder.createDefault(token)
                     .enableIntents(GatewayIntent.MESSAGE_CONTENT)
-                    // 2. Dizemos ao bot que os eventos vão ser tratados por esta própria classe
-                    .addEventListeners(new LeaderBot())
+                    .addEventListeners(bot)
                     .build();
 
             jda.awaitReady();
             System.out.println("O LeaderBot acordou e está online!");
 
-            // 3. Registar os comandos no servidor de testes (comandos de guild: aparecem logo)
             if (jda.getGuilds().isEmpty()) {
                 System.err.println("Erro: o bot não está em nenhum servidor. Convida-o primeiro.");
                 return;
             }
             Guild guild = jda.getGuilds().get(0);
 
-            // Apaga os comandos globais antigos (versão anterior), para não aparecerem repetidos
             jda.updateCommands().queue();
 
             guild.updateCommands().addCommands(
@@ -67,40 +102,110 @@ public class LeaderBot extends ListenerAdapter {
             );
 
         } catch (Exception e) {
-            System.err.println("Erro ao iniciar o bot: " + e.getMessage());
+            System.err.println("Erro fatal ao iniciar o bot: " + e.getMessage());
             e.printStackTrace();
+            System.exit(1);
         }
     }
 
-    // 4. Esta função "dispara" automaticamente sempre que alguém usa um comando no Discord
+    /**
+     * Ponto único de entrada para registos (/registar, #arquivo e /rajada).
+     */
+    public synchronized Registo registar(String autor, String canal, String texto) throws IOException {
+        Registo r = registoLog.registar(autor, canal, texto);     // LSN + registos.log + fsync + REGISTO
+
+        boolean primeiro = chunkAberto.vazio();
+        chunkAberto.adicionar(r);
+        if (chunkAberto.tamanho() >= Wire.CHUNK_MAX_BYTES) {
+            selar();                                               // por tamanho: sela de imediato
+        } else if (primeiro) {
+            Chunk este = chunkAberto;                              // por tempo: SELAGEM_MS após o 1.º registo
+            selagemAgendada = selador.schedule(() -> selarPorTempo(este),
+                    Wire.SELAGEM_MS, TimeUnit.MILLISECONDS);
+        }
+        return r;
+    }
+
+    // corre na thread do selador, SELAGEM_MS depois do 1.º registo do chunk 'alvo'
+    private synchronized void selarPorTempo(Chunk alvo) {
+        try {
+            if (chunkAberto != alvo) return;                       // já foi selado por tamanho
+            selar();
+        } catch (RuntimeException e) {
+            System.err.println("Erro na selagem por tempo: " + e.getMessage());
+        }
+    }
+
+    // fecha o chunk aberto; o registo seguinte abre um chunk novo
+    private synchronized void selar() {
+        if (chunkAberto.vazio()) return;
+        if (selagemAgendada != null) {
+            selagemAgendada.cancel(false);
+            selagemAgendada = null;
+        }
+        Chunk chunk = chunkAberto;
+        chunkAberto = new Chunk();                                 // depois de selado, o chunk não muda
+
+        byte[] dados = chunk.serializar(Wire.PAD_BYTES);
+
+        // cifrar, gravar selados/<chunkId>.bin e .hdr e só depois registar o evento SELADO.
+        // Os registos já estão em registos.log (com fsync); se isto falhar, não se perdem.
+        try {
+            Sealed s = ChunkCrypto.seal(masterKey, dados);
+            s.gravar(PASTA_SELADOS);
+            registoLog.registarEvento(Instant.now().toString(), "SELADO",
+                    "chunkId=" + s.chunkId() + " lsn=" + chunk.lsnDe() + "-" + chunk.lsnAte()
+                            + " registos=" + chunk.getRegistos().size()
+                            + " bytes=" + dados.length + " cifrado=" + s.ciphertext().length);
+            System.out.println("Chunk selado: " + s.chunkId() + " LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
+                    + ", " + chunk.getRegistos().size() + " registos, " + dados.length + " bytes");
+        } catch (IOException | GeneralSecurityException e) {
+            System.err.println("Erro ao selar o chunk LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
+                    + ": " + e.getMessage());
+        }
+    }
+
+    public byte[] getMasterKey() {
+        return masterKey;
+    }
+
+    public RegistoLog getRegistoLog() {
+        return registoLog;
+    }
+
     @Override
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event) {
 
-        // Verifica se o comando foi usado no canal #arquivo
         if (!event.getChannel().getName().equals("arquivo")) {
             event.reply("Os comandos só funcionam no canal #arquivo!").setEphemeral(true).queue();
             return;
         }
 
-        // Lógica do comando /estado
         if (event.getName().equals("estado")) {
             event.reply("Comando recebido: Mostrar estado (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /config r <n> (Com proteção de Cargo/Role)
         else if (event.getName().equals("config")) {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
             event.reply("Comando recebido: Fator de replicação R = " + n + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /registar <texto>
+        // /registar <texto> — grava com fsync ANTES de responder
         else if (event.getName().equals("registar")) {
             String texto = event.getOption("texto").getAsString();
-            event.reply("Comando recebido: Registar \"" + texto + "\" (Ainda não implementado)").queue();
+            String autor = event.getUser().getName();
+            String canal = event.getChannel().getName();
+
+            try {
+                Registo r = registar(autor, canal, texto);
+                event.reply("Registado com LSN " + r.lsn()).queue();
+            } catch (IOException e) {
+                System.err.println("Erro ao gravar registo: " + e.getMessage());
+                event.reply("Erro interno ao gravar o registo em disco.").setEphemeral(true).queue();
+            }
         }
 
-        // Lógica do comando /recuperar <de> <ate>
         else if (event.getName().equals("recuperar")) {
             long de = event.getOption("de").getAsLong();
             long ate = event.getOption("ate").getAsLong();
@@ -113,43 +218,79 @@ public class LeaderBot extends ListenerAdapter {
                     + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /replica-token (Com proteção de Cargo/Role)
         else if (event.getName().equals("replica-token")) {
             if (!temAdmin(event)) return;
-            // ephemeral: o token só deve ser visto por quem o pediu
             event.reply("Comando recebido: Gerar token de réplica (Ainda não implementado)")
                     .setEphemeral(true).queue();
         }
 
-        // Lógica do comando /replica-remover <id> (Com proteção de Cargo/Role)
         else if (event.getName().equals("replica-remover")) {
             if (!temAdmin(event)) return;
             String id = event.getOption("id").getAsString();
             event.reply("Comando recebido: Remover a réplica " + id + " (Ainda não implementado)").queue();
         }
 
-        // Lógica do comando /rajada <n> <intervalo> (Com proteção de Cargo/Role)
         else if (event.getName().equals("rajada")) {
             if (!temAdmin(event)) return;
             int n = event.getOption("n").getAsInt();
             int intervalo = event.getOption("intervalo_ms").getAsInt();
-            event.reply("Comando recebido: Rajada de " + n + " registos com intervalo de " + intervalo
-                    + " ms (Ainda não implementado)").queue();
+            String autor = event.getUser().getName();
+            MessageChannel canal = event.getChannel();
+
+            // responder já: o Discord só espera 3 s pela resposta a um slash command
+            event.reply("Rajada de " + n + " registos com intervalo de " + intervalo + " ms iniciada.").queue();
+
+            // a rajada corre numa thread própria, para não bloquear a thread de eventos do JDA
+            // (nem o 'selador', que tem de continuar livre para a selagem por tempo)
+            new Thread(() -> executarRajada(autor, canal, n, intervalo), "rajada").start();
         }
     }
 
-    // 5. Esta função "dispara" sempre que é escrita uma mensagem num canal que o bot vê
-    @Override
-    public void onMessageReceived(MessageReceivedEvent event) {
-        if (event.getAuthor().isBot()) return;                       // ignora bots (incluindo ele próprio)
-        if (!event.isFromGuild()) return;                            // ignora mensagens privadas
-        if (!event.getChannel().getName().equals("arquivo")) return; // ignora outros canais
-
-        event.getChannel().sendMessage("Mensagem recebida: \"" 
-            + event.getMessage().getContentRaw() + "\" (Ainda não implementado)").queue();
+    // /rajada: injeta n registos sintéticos pelo MESMO método do /registar e do #arquivo
+    private void executarRajada(String autor, MessageChannel canal, int n, int intervaloMs) {
+        long primeiro = -1, ultimo = -1;
+        try {
+            for (int i = 1; i <= n; i++) {
+                Registo r = registar(autor, canal.getName(), textoSintetico(i, n));
+                if (primeiro < 0) primeiro = r.lsn();
+                ultimo = r.lsn();
+                if (intervaloMs > 0 && i < n) Thread.sleep(intervaloMs);
+            }
+            canal.sendMessage("Rajada concluída: " + n + " registos, LSN " + primeiro + "-" + ultimo + ".").queue();
+        } catch (IOException e) {
+            System.err.println("Erro na rajada: " + e.getMessage());
+            canal.sendMessage("Rajada interrompida por erro de disco depois do LSN " + ultimo + ".").queue();
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
     }
 
-    // Verifica se quem chamou o comando tem o cargo "admin-arquivo"; se não tiver, responde com o erro
+    // "rajada i/n " seguido de carateres até RAJADA_TEXTO_BYTES
+    static String textoSintetico(int i, int n) {
+        String prefixo = "rajada " + i + "/" + n + " ";
+        StringBuilder sb = new StringBuilder(prefixo);
+        while (sb.length() < Wire.RAJADA_TEXTO_BYTES) sb.append((char) ('a' + sb.length() % 26));
+        return sb.toString();
+    }
+
+    @Override
+    public void onMessageReceived(MessageReceivedEvent event) {
+        if (event.getAuthor().isBot()) return;
+        if (!event.isFromGuild()) return;
+        if (!event.getChannel().getName().equals("arquivo")) return;
+
+        String autor = event.getAuthor().getName();
+        String canal = event.getChannel().getName();
+        String texto = event.getMessage().getContentRaw();
+
+        try {
+            Registo r = registar(autor, canal, texto);
+            event.getMessage().reply("Registado com LSN " + r.lsn()).queue();
+        } catch (IOException e) {
+            System.err.println("Erro ao gravar mensagem de #arquivo: " + e.getMessage());
+        }
+    }
+
     private boolean temAdmin(SlashCommandInteractionEvent event) {
         boolean isAdmin = event.getMember().getRoles().stream()
                 .anyMatch(role -> role.getName().equals("admin-arquivo"));
