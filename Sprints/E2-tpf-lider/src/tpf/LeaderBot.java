@@ -16,13 +16,12 @@ import net.dv8tion.jda.api.requests.GatewayIntent;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.security.GeneralSecurityException;
+import java.time.Instant;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
-
-import java.security.GeneralSecurityException;
-import java.time.Instant;
 
 public class LeaderBot extends ListenerAdapter {
 
@@ -31,15 +30,23 @@ public class LeaderBot extends ListenerAdapter {
 
     private final byte[] masterKey;
     private final RegistoLog registoLog;
+    private final PubSubHub hub;
 
     // chunk aberto e selagem
     private Chunk chunkAberto = new Chunk();
     private final ScheduledExecutorService selador = Executors.newSingleThreadScheduledExecutor();
     private ScheduledFuture<?> selagemAgendada;          // selagem por tempo do chunk aberto
 
-    public LeaderBot(byte[] masterKey, RegistoLog registoLog) {
+    public LeaderBot(byte[] masterKey, RegistoLog registoLog) throws IOException {
         this.masterKey = masterKey;
         this.registoLog = registoLog;
+        this.hub = new PubSubHub(
+                Wire.PORTO,
+                PASTA_LIDER.resolve("replicas.txt"),
+                registoLog,
+                this::onMensagemLider
+        );
+        this.hub.start();
     }
 
     public static void main(String[] args) {
@@ -109,6 +116,33 @@ public class LeaderBot extends ListenerAdapter {
     }
 
     /**
+     * Mensagens recebidas pelas réplicas no tópico tpf-lider (em processo),
+     * já acompanhadas pelo id autenticado da ligação WebSocket.
+     */
+    private void onMensagemLider(String idAutenticado, String mensagem) {
+        String[] partes = mensagem.split(";", 2);
+        String tipo = partes[0];
+
+        switch (tipo) {
+            case "HB" -> {
+                // TODO (Pessoa C): replicaRegistry.onHeartbeat(idAutenticado, mensagem)
+                System.out.println("[HB] de " + idAutenticado + ": " + mensagem);
+            }
+            case "INVENTARIO" -> {
+                // TODO (Pessoa C/D): processar inventário reportado pela réplica
+                System.out.println("[INVENTARIO] de " + idAutenticado + ": " + mensagem);
+            }
+            case "ACK" -> {
+                // TODO (Pessoa D): validar ACK com idAutenticado e atualizar Catalog
+                System.out.println("[ACK] de " + idAutenticado + ": " + mensagem);
+            }
+            default -> {
+                System.err.println("[tpf-lider] Mensagem desconhecida de " + idAutenticado + ": " + mensagem);
+            }
+        }
+    }
+
+    /**
      * Ponto único de entrada para registos (/registar, #arquivo e /rajada).
      */
     public synchronized Registo registar(String autor, String canal, String texto) throws IOException {
@@ -159,6 +193,8 @@ public class LeaderBot extends ListenerAdapter {
                             + " bytes=" + dados.length + " cifrado=" + s.ciphertext().length);
             System.out.println("Chunk selado: " + s.chunkId() + " LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
                     + ", " + chunk.getRegistos().size() + " registos, " + dados.length + " bytes");
+
+            // TODO (Pessoa D): adicionar ao Catalog, chamar reserveAndChoose e publicar STORE via hub.publish(...)
         } catch (IOException | GeneralSecurityException e) {
             System.err.println("Erro ao selar o chunk LSN " + chunk.lsnDe() + "-" + chunk.lsnAte()
                     + ": " + e.getMessage());
@@ -171,6 +207,10 @@ public class LeaderBot extends ListenerAdapter {
 
     public RegistoLog getRegistoLog() {
         return registoLog;
+    }
+
+    public PubSubHub getHub() {
+        return hub;
     }
 
     @Override
@@ -220,14 +260,30 @@ public class LeaderBot extends ListenerAdapter {
 
         else if (event.getName().equals("replica-token")) {
             if (!temAdmin(event)) return;
-            event.reply("Comando recebido: Gerar token de réplica (Ainda não implementado)")
-                    .setEphemeral(true).queue();
+            String token = hub.gerarToken();
+            long minutos = Wire.TOKEN_VALIDADE_MS / 60000L;
+            event.reply("Token de registo (uso único, válido por " + minutos + " min):\n`" + token + "`")
+                    .setEphemeral(true)
+                    .queue();
         }
 
         else if (event.getName().equals("replica-remover")) {
             if (!temAdmin(event)) return;
-            String id = event.getOption("id").getAsString();
-            event.reply("Comando recebido: Remover a réplica " + id + " (Ainda não implementado)").queue();
+            String id = event.getOption("id").getAsString().trim();
+            try {
+                boolean removida = hub.removerReplica(id);
+                if (removida) {
+                    // TODO (Pessoa C): remover/excluir réplica do ReplicaRegistry
+                    event.reply("Réplica `" + id + "` removida de replicas.txt e desligada.").queue();
+                } else {
+                    event.reply("Réplica `" + id + "` não encontrada em replicas.txt.")
+                            .setEphemeral(true)
+                            .queue();
+                }
+            } catch (IOException e) {
+                System.err.println("Erro ao remover réplica " + id + ": " + e.getMessage());
+                event.reply("Erro interno ao atualizar replicas.txt.").setEphemeral(true).queue();
+            }
         }
 
         else if (event.getName().equals("rajada")) {
