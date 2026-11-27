@@ -1,7 +1,8 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "Sprints/E2-tpf-lider/lib/JDA-6.7.0-withDependencies.jar"
+        "Sprints/E2-tpf-lider/lib/JDA-6.7.0-withDependencies.jar",
+        "Sprints/E2-tpf-lider/lib/Java-WebSocket-1.6.0.jar"
     ],
     "java.compile.nullAnalysis.mode": "automatic"
 }
