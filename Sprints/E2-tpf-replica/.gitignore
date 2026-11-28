@@ -1,0 +1,5 @@
+# pastas das réplicas: chaves privadas Ed25519 e chunks recebidos
+**/dados-*/
+**/eventos-*.txt
+out/
+bin/
